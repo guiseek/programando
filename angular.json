@@ -26,13 +26,13 @@
               "apps/portal/open/src/assets",
               {
                 "glob": "**/*",
-                "input": "libs/common/ui/kit/src/lib/assets",
+                "input": "libs/shared/assets/src/assets",
                 "output": "./assets"
               }
             ],
             "styles": ["apps/portal/open/src/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/common/ui/kit/src/lib/scss"]
+              "includePaths": ["libs/shared/assets/src/styles"]
             },
             "scripts": []
           },
@@ -542,11 +542,6 @@
               "apps/blog/src/assets",
               {
                 "glob": "**/*",
-                "input": "libs/common/ui/kit/src/lib/assets",
-                "output": "./assets"
-              },
-              {
-                "glob": "**/*",
                 "input": "libs/shared/assets/src/assets",
                 "output": "./assets"
               },
@@ -555,7 +550,7 @@
             ],
             "styles": ["apps/blog/src/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/common/ui/kit/src/lib/scss"]
+              "includePaths": ["libs/shared/assets/src/styles"]
             },
             "scripts": []
           },
@@ -752,13 +747,13 @@
               "apps/academy/src/assets",
               {
                 "glob": "**/*",
-                "input": "libs/common/ui/kit/src/lib/assets",
+                "input": "libs/shared/assets/src/assets",
                 "output": "./assets"
               }
             ],
             "styles": ["apps/academy/src/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/common/ui/kit/src/lib/scss"]
+              "includePaths": ["libs/shared/assets/src/styles"]
             },
             "scripts": []
           },

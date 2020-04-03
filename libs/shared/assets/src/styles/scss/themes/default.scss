@@ -1,15 +1,15 @@
-@import "core/config";
-@import "core/mixins";
+@import "../core/config";
+@import "../core/mixins";
 @import "base";
-@import "layout/flexbox";
+@import "../layout/flexbox";
 
-@import "components/table";
-@import "components/popovers";
-@import "components/navbar";
+@import "../components/table";
+@import "../components/popovers";
+@import "../components/navbar";
 
 @import "~@angular/material/theming";
-@import "mixins/breakpoints";
-@import "core/colors";
+@import "../mixins/breakpoints";
+@import "../core/colors";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only

@@ -1,8 +1,8 @@
 ---
 title: Angular CDK Accordion
 description: Uma das features escondidas do Angular CDK.
-thumbnail: assets/images/guiseek-thumbnail.jpg
-cover: /assets/logos/material.svg
+thumbnail: assets/images/guiseek-thumbnail.webp
+cover: /assets/covers/angular-cdk-accordion.webp
 video: null
 keywords:
   - angular

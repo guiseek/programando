@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'themes/default.scss';
-@import 'layout';
-@import 'partials/blog';
-@import 'custom-components';
+@import 'scss/themes/default.scss';
+@import 'scss/layout';
+@import 'scss/partials/blog';
+@import 'scss/custom-components';
 
 html,
 body {
