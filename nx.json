@@ -61,24 +61,11 @@
     "common-ui-toolbar": {
       "tags": ["scope:common", "type:ui"]
     },
-    "academy": {
-      "tags": ["scope:academy", "type:app"]
-    },
-    "academy-e2e": {
-      "tags": [],
-      "implicitDependencies": ["academy"]
-    },
-    "academy-feature-shell": {
-      "tags": ["scope:academy", "type:feature"]
-    },
     "shared-assets": {
       "tags": ["type:assets", "scope:shared"]
     },
     "blog-posts": {
       "tags": ["type:posts", "scope:blog"]
-    },
-    "academy-cursos": {
-      "tags": ["type:cursos", "scope:academy"]
     },
     "shared-account-feature-account": {
       "tags": ["scope:shared", "type:feature"]

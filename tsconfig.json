@@ -35,9 +35,6 @@
       ],
       "@webapp/common/ui/navbar": ["libs/common/ui/navbar/src/index.ts"],
       "@webapp/common/ui/toolbar": ["libs/common/ui/toolbar/src/index.ts"],
-      "@webapp/academy/feature-shell": [
-        "libs/academy/feature-shell/src/index.ts"
-      ],
       "@webapp/shared/account/feature-account": [
         "libs/shared/account/feature-account/src/index.ts"
       ],
