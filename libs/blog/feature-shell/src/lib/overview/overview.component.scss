@@ -1,0 +1,20 @@
+:host {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 2rem;
+  .actions {
+    margin-top: 36px;
+  }
+  .mat-form-field {
+    width: 100%;
+    ui-icon {
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .mat-hint {
+      opacity: 0.5;
+    }
+  }
+}

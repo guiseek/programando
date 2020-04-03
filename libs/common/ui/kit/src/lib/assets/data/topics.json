@@ -1,0 +1,86 @@
+[
+  {
+    "icon": "angular.svg",
+    "route": "https://angular.io",
+    "title": "Angular",
+    "externalUrl": "https://angular.io",
+    "desc": "Angular é uma plataforma de aplicações web de código-fonte aberto e front-end baseado em TypeScript liderado pela Equipe Angular do Google e por uma comunidade de indivíduos e corporações."
+  },
+  {
+    "icon": "pwa.svg",
+    "route": "https://www.w3.org/TR/appmanifest",
+    "title": "PWA",
+    "externalUrl": "https://www.w3.org/TR/appmanifest",
+    "desc": "Progressive Web App é uma metodologia de desenvolvimento de software. Um Progressive Web App pode ser visto como uma evolução híbrida entre as páginas da web regulares e um aplicativo móvel."
+  },
+  {
+    "icon": "ionic.svg",
+    "route": "https://ionicframework.com",
+    "title": "Ionic",
+    "externalUrl": "https://ionicframework.com",
+    "desc": "O Ionic é um SDK de código aberto completo para o desenvolvimento de aplicativos móveis híbridos. Diferente do PWA é gerado um apk com a ajuda do Apache Cordova."
+  },
+  {
+    "icon": "npm.svg",
+    "route": "https://npmjs.com",
+    "title": "NPM",
+    "externalUrl": "https://npmjs.com",
+    "desc": "O npm é um gerenciador de pacotes para a linguagem de programação JavaScript. É o gerenciador de pacotes padrão para o ambiente de tempo de execução JavaScript Node.js."
+  },
+  {
+    "icon": "html.svg",
+    "route": "https://www.w3.org/TR/html52",
+    "title": "HTML",
+    "externalUrl": "https://www.w3.org/TR/html52",
+    "desc": "HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores."
+  },
+  {
+    "icon": "css.svg",
+    "route": "https://www.w3.org/TR/css",
+    "title": "CSS",
+    "externalUrl": "https://www.w3.org/TR/css",
+    "desc": "Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web."
+  },
+  {
+    "icon": "js.svg",
+    "route": "https://www.w3.org/standards/webdesign/script",
+    "title": "Javascript",
+    "externalUrl": "https://www.w3.org/standards/webdesign/script",
+    "desc": "JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multi-paradigma."
+  },
+  {
+    "icon": "ts.svg",
+    "route": "http://www.typescriptlang.org",
+    "title": "Typescript",
+    "externalUrl": "http://www.typescriptlang.org",
+    "desc": "TypeScript é um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem e alguns outros recursos a linguagem."
+  },
+  {
+    "icon": "nodejs.svg",
+    "route": "https://nodejs.org/",
+    "title": "NodeJS",
+    "externalUrl": "https://nodejs.org/",
+    "desc": "Node.js é um interpretador de JavaScript assíncrono com código aberto orientado a eventos."
+  },
+  {
+    "icon": "nestjs.svg",
+    "route": "https://nestjs.com",
+    "title": "NestJS",
+    "externalUrl": "https://nestjs.com",
+    "desc": "O NestJS é uma estrutura para criar aplicativos da web Node.js. É construído com TypeScript e combina elementos de OOP (Programação Orientada a Objetos), FP (Programação Funcional) e FRP (Programação Reativa Funcional)."
+  },
+  {
+    "icon": "firebase.svg",
+    "route": "https://firebase.com",
+    "title": "Firebase",
+    "externalUrl": "https://firebase.com",
+    "desc": "O Firebase é uma plataforma de desenvolvimento de aplicativos móveis e da Web desenvolvida pela Firebase, Inc. em 2011 e adquirida pelo Google em 2014."
+  },
+  {
+    "icon": "nx.svg",
+    "route": "https://firebase.com",
+    "title": "NX Workspaces",
+    "externalUrl": "https://firebase.com",
+    "desc": "O Nx é um conjunto de ferramentas de desenvolvimento extensíveis para monorepos, que te ajudam a desenvolver como Google, Facebook e Microsoft. Possui suporte de primeira classe para muitas tecnologias de front-end e back-end, portanto, sua documentação é oferecida em vários tipos."
+  }
+]

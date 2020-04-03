@@ -1,0 +1,83 @@
+@import "core/config";
+
+ui-sidenav-item ui-accordion-item .content .content-body {
+  padding: 0;
+}
+ui-sidenav-item .mat-list-base .mat-list-item .mat-list-item-content {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  line-height: 48px;
+  display: inline-block;
+}
+.dark ui-sidenav-item .mat-list-base .mat-list-item.active {
+  color: $red-color;
+}
+
+.cdk-overlay-pane.sign {
+  border-radius: 100px;
+  overflow: hidden;
+  opacity: 0.9;
+  .mat-dialog-container {
+    padding: 0;
+
+    button.google {
+      margin-right: 4px;
+    }
+    button.github {
+      margin-left: 4px;
+    }
+  }
+}
+
+.features .mat-card {
+  padding-bottom: 0;
+
+  h1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .keywords {
+    margin-bottom: 8px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 1rem;
+  }
+  .mat-card-content {
+    font-size: 1.2rem;
+  }
+  .mat-card-header {
+    align-items: center;
+    margin: -16px;
+    padding: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    .mat-card-avatar {
+      width: 24px;
+      height: 24px;
+    }
+    .mat-card-subtitle {
+      font-size: 1.1rem;
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .mat-card-header-text {
+      justify-content: center;
+      display: flex;
+      flex-flow: column;
+      .mat-card-title {
+        font-weight: 400;
+      }
+      .mat-card-subtitle {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

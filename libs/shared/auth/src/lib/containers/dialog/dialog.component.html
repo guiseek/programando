@@ -1,0 +1,10 @@
+<div matTooltip="Login com Google">
+  <auth-google-button (auth)="onAuth($event)"></auth-google-button>
+</div>
+<div class="actions">
+  <h3 class="mat-h3">Login</h3>
+  <mat-icon matRipple matTooltip="Fechar" (click)="close()">close</mat-icon>
+</div>
+<div matTooltip="Login com Github">
+  <auth-github-button (auth)="onAuth($event)"></auth-github-button>
+</div>

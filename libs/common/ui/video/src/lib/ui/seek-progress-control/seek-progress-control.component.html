@@ -1,0 +1,8 @@
+<ui-slider-progress-bar
+  [color]="color"
+  mode="buffer"
+  step="0.01"
+  [value]="curTimePercent"
+  [bufferValue]="bufTimePercent"
+  (input)="seekVideo($event.value)"
+></ui-slider-progress-bar>

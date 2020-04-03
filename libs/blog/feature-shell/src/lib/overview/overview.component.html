@@ -1,0 +1,14 @@
+<section class="wrapper">
+  <div class="container">
+    <mat-form-field role="search" appearance="outline">
+      <ui-icon matPrefix icon="search"></ui-icon>
+      <input type="text" placeholder="Busca..." matInput name="demo-name" aria-required="false" aria-label="Busca"
+        #input />
+      <span class="mat-hint" matSuffix *ngIf="keyword$ | async as keyword">
+        filtro: "{{ keyword }}"
+      </span>
+    </mat-form-field>
+
+    <blog-preview [keyword]="keyword$ | async" [search]="searchString"></blog-preview>
+  </div>
+</section>

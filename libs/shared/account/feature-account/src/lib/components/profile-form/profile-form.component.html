@@ -1,0 +1,16 @@
+<form [formGroup]="form" fxLayout="column">
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input type="text" matInput formControlName="displayName">
+    <mat-error>Obrigatório</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="email">
+    <mat-error>Inválido</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>ID de usuário</mat-label>
+    <input type="text" matInput formControlName="uid">
+  </mat-form-field>
+</form>

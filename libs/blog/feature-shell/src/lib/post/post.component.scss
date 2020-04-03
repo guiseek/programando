@@ -1,0 +1,58 @@
+@import 'libs/common/ui/kit/src/lib/scss/core/config';
+@import 'libs/common/ui/kit/src/lib/scss/core/mixins';
+
+:host {
+  @include resp(small) {
+    margin-top: 0;
+  }
+  .mat-card.post-author {
+    margin-top: -20px;
+    /* border-top-left-radius: 0; */
+    /* border-top-right-radius: 0; */
+    background: rgba(0,0,0,.1);
+    margin-bottom: 16px;
+    padding-bottom: 0px;
+    z-index: -1;
+
+    .mat-card-subtitle {
+      color: rgba(255,255,255,.4);
+      span {
+        color: rgba(255,255,255,.6);
+      }
+    }
+  }
+  .go-back {
+    display: block;
+    transition: transform 200ms ease-in-out;
+    position: absolute;
+    left: -100px;
+    .mat-icon {
+      font-size: 64px;
+      width: 100px;
+      height: 100%;
+    }
+    &:hover {
+      transform: scale(1.5) translateX(-20px);
+      // transform: translateX(-20px);
+    }
+  }
+  article {
+    @include resp(small) {
+      padding: 8px;
+    }
+    .progress {
+      height: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      opacity: .8;
+      transition: opacity 300ms ease-in-out, height 300ms ease-in-out;
+
+      &.loaded {
+        opacity: 0;
+        height: 0;
+      }
+    }
+  }
+}

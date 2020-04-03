@@ -1,0 +1,47 @@
+:host {
+  display: block;
+  height: 100%;
+  .mat-card {
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    align-items: center;
+    // margin: 16px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.1);
+    padding-bottom: 0;
+    padding-top: 0;
+
+    cursor: pointer;
+    margin: 4px;
+    opacity: 0.8;
+    transition: 300ms transform ease-in-out, 200ms opacity ease-in-out,
+      300ms filter ease-in-out;
+    &:hover {
+      transform: scale(1.02);
+      opacity: 1;
+    }
+
+    .mat-card-subtitle {
+      margin-top: 12px;
+    }
+  }
+  // .mat-card {
+  //   max-width: 720px;
+  //   padding: 0;
+  //   overflow: hidden;
+  //   height: 405px;
+  //   > iframe {
+  //     width: 720px;
+  //     height: 405px;
+  //     max-width: inherit;
+  //   }
+  // }
+  main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+}

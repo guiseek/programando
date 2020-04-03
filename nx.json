@@ -1,0 +1,90 @@
+{
+  "npmScope": "webapp",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "portal-open": {
+      "tags": []
+    },
+    "portal/open-e2e": {
+      "tags": [],
+      "implicitDependencies": ["portal-open"]
+    },
+    "common-ui-brand": {
+      "tags": ["scope:common", "type:ui"]
+    },
+    "common-ui-video": {
+      "tags": ["scope:common", "type:ui"]
+    },
+    "common-ui-kit": {
+      "tags": ["scope:shared", "type:ui"]
+    },
+    "portal-feature-shell": {
+      "tags": ["scope:portal", "type:feature"]
+    },
+    "common-ui-sidenav": {
+      "tags": ["scope:common", "type:ui"]
+    },
+    "common-ui-cdk-accordion": {
+      "tags": ["scope:common", "type:ui"]
+    },
+    "blog-feature-shell": {
+      "tags": ["scope:blog", "type:feature"]
+    },
+    "shared-data-access": {
+      "tags": ["scope:shared", "type:data-access"]
+    },
+    "shared-auth": {
+      "tags": ["scope:shared", "type:feature"]
+    },
+    "common-ui-cdk-popover": {
+      "tags": ["scope:common", "type:ui"]
+    },
+    "blog": {
+      "tags": ["scope:blog", "type:app"]
+    },
+    "blog-e2e": {
+      "tags": [],
+      "implicitDependencies": ["blog"]
+    },
+    "common-ui-navbar": {
+      "tags": ["scope:common", "type:ui"]
+    },
+    "common-ui-toolbar": {
+      "tags": ["scope:common", "type:ui"]
+    },
+    "academy": {
+      "tags": ["scope:academy", "type:app"]
+    },
+    "academy-e2e": {
+      "tags": [],
+      "implicitDependencies": ["academy"]
+    },
+    "academy-feature-shell": {
+      "tags": ["scope:academy", "type:feature"]
+    },
+    "shared-assets": {
+      "tags": ["type:assets", "scope:shared"]
+    },
+    "blog-posts": {
+      "tags": ["type:posts", "scope:blog"]
+    },
+    "academy-cursos": {
+      "tags": ["type:cursos", "scope:academy"]
+    },
+    "shared-account-feature-account": {
+      "tags": ["scope:shared", "type:feature"]
+    },
+    "shared-account-data-access": {
+      "tags": ["scope:shared", "type:data-access"]
+    }
+  }
+}

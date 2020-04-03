@@ -1,0 +1,12 @@
+<ng-container *ngIf="auth.user$ | async as user; else authButton">
+  <!-- <div #popoverTarget> -->
+  <button type="button" mat-stroked-button (click)="open($event.target, user)">
+    <!-- <mat-icon>person</mat-icon> -->
+    {{ user.displayName }}
+  </button>
+  <!-- </div> -->
+</ng-container>
+
+<ng-template #authButton>
+  <auth-dialog-button matTooltip="Login" (auth)="onAuth($event)"></auth-dialog-button>
+</ng-template>

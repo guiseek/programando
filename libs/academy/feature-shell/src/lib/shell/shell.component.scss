@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  height: 100%;
+  .mat-card {
+    max-width: 600px;
+  }
+
+  // background-color: var(--bg-primary);
+}
+

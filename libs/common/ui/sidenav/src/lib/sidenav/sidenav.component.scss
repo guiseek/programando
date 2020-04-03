@@ -1,0 +1,9 @@
+:host {
+  margin: 8px;
+  display: block;
+  height: 100%;
+
+  @media print {
+    display: none;
+  }
+}

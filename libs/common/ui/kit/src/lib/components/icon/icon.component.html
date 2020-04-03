@@ -1,0 +1,8 @@
+<ng-container *ngIf="svgIcon; else uiIcon">
+  <mat-icon [color]="color" [inline]="inline" [fontSet]="fontSet" [svgIcon]="svgIcon"></mat-icon>
+</ng-container>
+
+<ng-template #uiIcon>
+  <mat-icon [color]="color" [inline]="inline" [fontSet]="fontSet" [fontIcon]="fontIcon">{{ matIcon }}</mat-icon>
+</ng-template>
+

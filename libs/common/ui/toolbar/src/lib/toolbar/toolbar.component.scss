@@ -1,0 +1,23 @@
+@import 'libs/common/ui/kit/src/lib/scss/core/config';
+@import 'libs/common/ui/kit/src/lib/scss/core/mixins';
+
+
+:host {
+  display: block;
+  min-height: 5rem;
+  height: 5rem;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+
+  .mat-toolbar {
+    height: 100%;
+    // padding-left: 6rem;
+    display: flex;
+    justify-content: space-between;
+    @include resp(medium) {
+      padding-left: 1rem;
+    }
+  }
+}

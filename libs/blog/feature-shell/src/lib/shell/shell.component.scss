@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  height: 100%;
+
+  // .mat-card {
+  //   max-width: 600px;
+  // }
+
+  @media only screen and (min-width: 600px) {
+    ui-toolbar {
+      margin-left: 5rem;
+      width: calc(100% - 5rem);
+    }
+  }
+
+  main {
+    background-image: url('/assets/images/bg-rel-docs.svg');
+    background-position: top;
+    background-attachment: fixed;
+  }
+  // background-color: var(--bg-primary);
+}
+
+

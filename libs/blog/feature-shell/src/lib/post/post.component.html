@@ -1,0 +1,51 @@
+<div class="wrapper alt">
+  <div class="container" *ngIf="post$ | async as post">
+    <a class="go-back" mat-icon-button routerLink="/">
+      <mat-icon svgIcon="double-arrow-back"></mat-icon>
+    </a>
+    <article role="article" itemscope itemtype="http://schema.org/BlogPosting">
+      <!-- <section class="blog-header">
+        <span *ngIf="post.thumbnail" class="image fit">
+          <img [src]="post.thumbnail" alt="header image" />
+        </span>
+      </section> -->
+      <meta itemprop="name headline" [attr.content]="post.title" />
+      <meta itemprop="abstract" [attr.content]="post.description" />
+      <meta itemprop="author" [attr.content]="post.author" />
+      <meta itemprop="datePublished" [attr.content]="post.date" />
+
+      <ng-container *ngIf="showVideo">
+        <mat-card class="video-container">
+          <youtube-player [videoId]="post.video"></youtube-player>
+        </mat-card>
+      </ng-container>
+      <mat-card class="post-author">
+        <mat-card-content *ngIf="post.keywords">
+          <a *ngFor="let keyword of post.keywords" routerLink="/" [queryParams]="{ keyword: keyword }">
+            <span class="tag tag-sm" [class]="'tag-' + keyword">
+              #{{ keyword }}
+            </span>
+          </a>
+        </mat-card-content>
+        <mat-card-header role="heading" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img itemprop="image" mat-card-avatar [src]="post.thumbnail" [attr.alt]="post.description" />
+          <mat-card-title itemprop="abstract">{{post.description}}</mat-card-title>
+          <mat-card-subtitle>
+            Publicado por
+            <span itemprop="name">{{ post.author }}</span>
+            em
+            <span>{{ post.updated | date: 'mediumDate' }}</span>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <section class="blog-content">
+        <div class="progress" [ngClass]="{'loaded': contentLoaded}">
+          <mat-hint>Carregando conteúdo...</mat-hint>
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </div>
+        <scully-content></scully-content>
+      </section>
+    </article>
+  </div>
+</div>

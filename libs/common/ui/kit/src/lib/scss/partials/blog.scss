@@ -1,0 +1,164 @@
+/* include CSS for prism toolbar */
+@import '~prismjs/plugins/toolbar/prism-toolbar.css';
+/* check node_modules/prismjs/themes/ for the available themes */
+@import '~prismjs/themes/prism-tomorrow.css';
+
+:root {
+  scroll-behavior: smooth;
+}
+
+blog-post {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  h1:first-of-type {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+
+  .mat-chip {
+    padding: 4px 8px;
+    min-height: 24px;
+    cursor: pointer;
+    > span {
+      opacity: 0.5;
+    }
+  }
+  .blog-content {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.mat-card.video-container {
+  padding: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  margin-bottom: 16px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tag {
+  display: inline-block;
+  opacity: 0.8;
+  margin: 0.25em 0.2em;
+  padding: 0.2em 0.5em 0.3em;
+  border-radius: 2px;
+  background: #454e56;
+  color: #b2becd;
+  &-sm {
+    font-size: 1em;
+    display: inline-block;
+    letter-spacing: 0.15ch;
+    font-weight: 400;
+  }
+  &-pwa {
+    background: #5a0fc8;
+    color: #ffffff;
+  }
+  &-https,
+  &-ssl {
+    background: #292a2d;
+    color: #7bc394;
+  }
+  &-nx {
+    background: #002f56;
+    color: #ffffff;
+  }
+  &-apple {
+    background: #ffffff;
+    color: #000000;
+  }
+  &-ios {
+    color: #fff;
+    background: #000;
+  }
+  &-javascript {
+    background: #f0db4f;
+    color: #000;
+  }
+  &-angular {
+    background: #dc0530;
+    color: #fff;
+  }
+  &-material {
+    background: #ffa726;
+    color: #000;
+  }
+  &-typescript {
+    background: #2775c3;
+    color: #fff;
+  }
+  &-firebase {
+    background: #ffcb2b;
+    color: #12181a;
+  }
+  &-nest {
+    color: #e0234e;
+    background: #000;
+  }
+  &-ionic {
+    background: #fff;
+    color: #4a8afc;
+  }
+  &-node {
+    background: #90c53f;
+    color: #46483d;
+  }
+}
+
+blockquote {
+  background: #deefff;
+  border-left: 10px solid rgba(0, 0, 0, 0.5);
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: '\201C''\201D''\2018''\2019';
+  overflow-x: scroll;
+}
+blockquote:before {
+  color: rgba(0, 0, 0, 0.5);
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote > p {
+  display: block;
+}
+blockquote strong {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+}
+blockquote p + em:last-of-type {
+  float: right;
+  font-size: 1.2rem;
+}
+
+.dark {
+  blockquote {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 10px solid rgba(255, 255, 255, 0.5);
+  }
+  blockquote:before {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  blockquote strong {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

@@ -1,0 +1,89 @@
+<div
+  #player
+  class="videoplayer"
+  [ngClass]="getOverlayClass('show-mouse', 'hide-mouse')"
+>
+  <div
+    class="header"
+    *ngIf="title"
+    [ngClass]="getOverlayClass('visible', 'hidden')"
+  >
+    {{ title }}
+  </div>
+
+  <video
+    #video
+    class="video"
+    [attr.src]="src ? src : null"
+    [attr.autoplay]="autoplay ? true : null"
+    [preload]="preload ? 'auto' : 'metadata'"
+    [attr.poster]="poster ? poster : null"
+    [attr.loop]="loop ? loop : null"
+  >
+    <ng-content select="source"></ng-content>
+    <ng-content select="track"></ng-content>
+    This browser does not support HTML5 video.
+  </video>
+
+  <div
+    class="controls"
+    *ngIf="videoLoaded"
+    [ngClass]="getOverlayClass('visible', 'hidden')"
+  >
+    <div class="progress">
+      <ui-seek-progress-control
+        [color]="color"
+        [video]="video"
+      ></ui-seek-progress-control>
+    </div>
+
+    <div class="menu">
+      <div class="left">
+        <ui-play-button
+          (playChanged)="playing = $event"
+          [video]="video"
+          [keyboard]="keyboard"
+        >
+        </ui-play-button>
+
+        <ui-frame-control
+          *ngIf="showFrameByFrame"
+          [video]="video"
+          [fps]="fps"
+        ></ui-frame-control>
+
+        <ui-volume-control
+          [muted]="muted"
+          (mutedChanged)="muted = $event; mutedChange.emit(muted)"
+          [color]="color"
+          [video]="video"
+          [keyboard]="keyboard"
+        >
+        </ui-volume-control>
+
+        <ui-time-control [video]="video"></ui-time-control>
+      </div>
+
+      <div class="right">
+        <ui-quality-control
+          *ngIf="quality"
+          [video]="video"
+        ></ui-quality-control>
+
+        <ui-download-button
+          *ngIf="download"
+          [title]="title"
+          [video]="video"
+        ></ui-download-button>
+
+        <ui-fullscreen-button
+          *ngIf="fullscreen"
+          (fullscreenChanged)="isFullscreen = $event"
+          [player]="player"
+          [keyboard]="keyboard"
+        ></ui-fullscreen-button>
+      </div>
+    </div>
+  </div>
+  <ui-video-spinner [spinner]="spinner" [video]="video"></ui-video-spinner>
+</div>

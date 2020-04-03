@@ -1,0 +1,22 @@
+@import "core/config";
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/cdk/a11y";
+@import "~@angular/cdk/overlay";
+
+@include cdk-a11y();
+@include cdk-overlay();
+
+.wrapper {
+  width: 100%;
+  // max-width: $wrapper-width;
+}
+
+hr {
+  border: 0;
+  height: 2rem;
+  font-family: monospace;
+  &::after {
+    @include hr-after;
+    top: -0.25rem;
+  }
+}

@@ -1,0 +1,74 @@
+<ui-toolbar>
+
+  <ui-toolbar-button>
+    <a routerLink="/" mat-icon-button>
+      <mat-icon svgIcon="double-arrow-back"></mat-icon>
+      <!-- <mat-icon>arrow_back</mat-icon> -->
+    </a>
+  </ui-toolbar-button>
+  <ui-toolbar-brand>
+    <a routerLink="/">
+      <ui-logo size="54px"></ui-logo>
+    </a>
+  </ui-toolbar-brand>
+
+</ui-toolbar>
+
+<main role="main">
+
+  <ng-container *ngIf="(user$ | async) as user; else loading">
+
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Configurações da conta</mat-card-title>
+        <mat-card-subtitle>
+          <span>Acessado em</span>
+          {{ user.metadata.lastSignInTime | date:'medium' }}
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <ui-accordion>
+        <ui-accordion-item title="Autenticação" [expanded]="false">
+
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <webapp-profile-form [form]="form"></webapp-profile-form>
+            <mat-card-actions>
+              <button mat-flat-button color="primary" [disabled]="!form.valid">
+                Salvar
+              </button>
+            </mat-card-actions>
+          </form>
+
+        </ui-accordion-item>
+
+        <ui-accordion-item title="Segurança">
+
+          <mat-card-subtitle>Alterar senha</mat-card-subtitle>
+
+          <form [formGroup]="passForm" (ngSubmit)="changePassword(user.email)">
+            <webapp-update-password [form]="passForm"></webapp-update-password>
+            <mat-card-actions>
+              <button mat-flat-button color="primary" [disabled]="!passForm.valid">
+                Alterar
+              </button>
+            </mat-card-actions>
+
+            <hr>
+
+            <button mat-stroked-button type="button" color="accent" (click)="removeAccount()">
+              Remover minha conta
+            </button>
+          </form>
+
+        </ui-accordion-item>
+      </ui-accordion>
+
+    </mat-card>
+
+  </ng-container>
+
+  <ng-template #loading>
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  </ng-template>
+</main>

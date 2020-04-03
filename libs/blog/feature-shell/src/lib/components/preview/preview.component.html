@@ -1,0 +1,58 @@
+<section *ngIf="blogPostData$ | async as blogPosts" class="features row flex-edges">
+
+  <ng-container *ngIf="blogPosts.length; else emptyResultsTemplate">
+
+    <article *ngFor="let post of blogPosts; let i = index" class="col-fill sm-12 xs-12 md-6 lg-6">
+
+      <mat-card class="blog-post-card">
+
+        <ng-container *ngIf="post.cover">
+          <a [routerLink]="post.route">
+            <img mat-card-image itemprop="image" [src]="post.cover" [attr.alt]="post.title" />
+          </a>
+        </ng-container>
+
+        <h1 itemprop="name headline" class="mat-display-1">
+          <a [routerLink]="post.route">
+            {{ post.title }}
+          </a>
+        </h1>
+
+
+
+        <div class="keywords" *ngIf="post.keywords">
+          <a *ngFor="let keyword of post.keywords" routerLink="/" [queryParams]="{ keyword: keyword }">
+            <span class="tag tag-sm" [class]="'tag-' + keyword">
+              # {{ keyword }}
+            </span>
+          </a>
+        </div>
+
+        <p mat-card-content itemprop="abstract">
+
+          {{ post.description }}
+
+        </p>
+
+        <mat-card-header itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img itemprop="image" mat-card-avatar [src]="post.thumbnail" [attr.alt]="post.description" />
+          <mat-card-subtitle>
+            <span itemprop="name">{{ post.author }}</span>
+            em {{ post.updated | date: 'mediumDate' }}
+          </mat-card-subtitle>
+        </mat-card-header>
+
+      </mat-card>
+    </article>
+
+  </ng-container>
+
+  <ng-template #emptyResultsTemplate>
+    Lista vazia
+  </ng-template>
+</section>
+<div *ngIf="max || keyword || search" class="actions">
+  <a routerLink="/" mat-stroked-button color="accent">
+    Mostrar todos
+  </a>
+</div>

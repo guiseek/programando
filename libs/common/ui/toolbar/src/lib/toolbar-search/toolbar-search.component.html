@@ -1,0 +1,15 @@
+<div fxLayout="row" fxLayoutAlign="center stretch" fxFlex="grow">
+  <button class="search-button" [ngClass]="{'not-empty': parentControl.value}" mat-button (click)="open()">
+    <mat-icon>search</mat-icon>
+  </button>
+  <mat-form-field class="search" [class.search-open]="isOpen || parentControl.value" fxFlex="auto">
+    <input
+      #input
+      (blur)="close()"
+      matInput
+      [formControl]="parentControl"
+      (keyup)="up.emit($event.target.value)"
+      placeholder="Encontrar..."
+    />
+  </mat-form-field>
+</div>

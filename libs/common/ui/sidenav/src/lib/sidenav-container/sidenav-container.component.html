@@ -1,0 +1,44 @@
+<!-- <div class="ui-sidenav-container" [class.mobile]="isHandset$ | async"> -->
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <ng-content select="aside"></ng-content>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+    <!-- <main> -->
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Alternar navegação lateral"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon
+          svgIcon="menu"
+          aria-hidden="false"
+          aria-label="Icone de navegação lateral"
+        ></mat-icon>
+        <!-- <mat-icon aria-label="Side nav toggle icon">menu</mat-icon> -->
+      </button>
+
+      <ng-content select="header"></ng-content>
+    </mat-toolbar>
+
+    <ng-content select="main"></ng-content>
+
+    <mat-toolbar>
+      <ng-content select="footer"></ng-content>
+    </mat-toolbar>
+    <!-- </main> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- </div> -->

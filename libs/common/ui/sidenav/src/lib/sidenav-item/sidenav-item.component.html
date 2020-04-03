@@ -1,0 +1,57 @@
+<ng-container *ngIf="children; else withoutChildren">
+  <ui-accordion>
+    <ui-accordion-item [title]="title" [expanded]="isOpen">
+      <mat-nav-list>
+        <ng-container *ngFor="let item of children">
+          <a
+            mat-list-item
+            class="sub-nav"
+            *ngIf="!item.externalUrl"
+            [routerLink]="item.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <i mat-list-icon class="material-icons" *ngIf="item.icon">{{
+              item.icon
+            }}</i>
+            {{ item.title }}
+          </a>
+          <a
+            *ngIf="!!item.externalUrl"
+            mat-list-item
+            href="{{ item.externalUrl }}"
+            target="_blank"
+          >
+            <i class="material-icons" *ngIf="item.icon">{{ item.icon }}</i>
+            {{ item.title }}
+          </a>
+        </ng-container>
+      </mat-nav-list>
+    </ui-accordion-item>
+  </ui-accordion>
+</ng-container>
+
+<ng-template #withoutChildren>
+  <mat-nav-list>
+    <a
+      mat-list-item
+      *ngIf="!externalUrl"
+      [routerLink]="route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [attr.popover-right]="title"
+    >
+      <i mat-list-icon class="material-icons" *ngIf="icon">{{ icon }}</i>
+      {{ title }}
+    </a>
+    <a
+      *ngIf="!!externalUrl"
+      mat-list-item
+      href="{{ externalUrl }}"
+      target="_blank"
+    >
+      <i class="material-icons" *ngIf="icon">{{ icon }}</i>
+      {{ title }}
+    </a>
+  </mat-nav-list>
+</ng-template>

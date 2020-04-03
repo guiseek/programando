@@ -1,0 +1,13 @@
+<nav class="nav-container" (click)="$event.stopPropagation()">
+  <ui-sidenav-item
+    *ngFor="let item of items"
+    [isOpen]="item.isOpened"
+    [title]="item.title"
+    [externalUrl]="item?.externalUrl"
+    [icon]="item?.icon"
+    [route]="item?.path"
+    [children]="item.children"
+    class="nav-item"
+  >
+  </ui-sidenav-item>
+</nav>

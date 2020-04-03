@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "head-tech": {
+      "hosting": {
+        "blog": [
+          "programando"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "head-tech"
+  }
+}

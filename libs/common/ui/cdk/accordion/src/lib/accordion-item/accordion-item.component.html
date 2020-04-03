@@ -1,0 +1,14 @@
+<header (click)="toggle()">
+  <h3 class="mat-subheader" matRipple matRippleColor="rgba(0,0,0,.1)">
+    {{ title }}
+
+    <i class="material-icons" [@indicatorRotate]="expanded"
+      >keyboard_arrow_down</i
+    >
+  </h3>
+</header>
+<div class="content" [@bodyExpansion]="expanded">
+  <div class="content-body">
+    <ng-content></ng-content>
+  </div>
+</div>
