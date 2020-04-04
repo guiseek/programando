@@ -130,10 +130,11 @@ span.tag {
 blockquote {
   background: #deefff;
   border-left: 10px solid rgba(0, 0, 0, 0.5);
-  margin: 1.5em 10px;
+  margin: 0 10px 1.5em;
   padding: 0.5em 10px;
   quotes: '\201C''\201D''\2018''\2019';
   // overflow-x: scroll;
+  border-radius: 14px;
   overflow-x: visible;
 }
 blockquote:before {
@@ -148,6 +149,9 @@ blockquote:before {
   // line-height: 0.1em;
   // margin-right: 0.25em;
   // vertical-align: -0.4em;
+}
+blockquote > h2 {
+  margin-top: 0;
 }
 blockquote > p {
   margin-top: 0;
