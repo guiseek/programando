@@ -1,8 +1,8 @@
 title: Título
-description: Descrição
-thumbnail: assets/images/guiseek-thumbnail.jpg
-cover:
+description:
+cover: assets/covers/default.webp
 video:
+canonicalUrl: 'https://programando.web.app/posts/'
 keywords:
   - angular
 author: Guilherme Siquinelli

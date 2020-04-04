@@ -25,11 +25,11 @@ Com um projeto criado, seja `Vanilla`, `Angular`, `React`, `Vue`, `Svelte`, `Nod
 
 Este arquivo ainda não existe, crie no diretório do seu projeto.
 
-```bash
+```sh
 $ mkdir server && touch server/localhost.conf
 ```
 
-```bash
+```sh
 # server/localhost.conf
 
 [ req ]
@@ -117,7 +117,7 @@ Eles vão gerar chaves privadas, certificados autoassinados e solicitações de 
 
 #### Crie o diretório que irá guardar os arquivos
 
-```bash
+```sh
 $ mkdir -p server/private
 ```
 
@@ -125,19 +125,19 @@ Execute os scripts criados
 
 Gera uma nova chave privada
 
-```bash
+```sh
 $ npm run gen-key
 ```
 
 Gera um certificado autoassinado
 
-```bash
+```sh
 $ npm run gen-cert
 ```
 
 Gera uma nova solicitação de assinatura para enviar a uma autoridade de certificação
 
-```bash
+```sh
 $ npm run gen-csr
 ```
 
@@ -161,7 +161,7 @@ Então teremos o diretório `server/private` já com os arquivos.
 
 #### Colocando pra funcionar (macOS)
 
-```bash
+```sh
 # Versões mais antigas
 $ open “/Applications/Utilities/Keychain Access.app”
 
@@ -180,7 +180,7 @@ Depois abra o certificado que acabou de arrastar _clicando 2x_ e marque como a p
 
 #### Usando
 
-```typescript
+```ts
 /**
  _   _           _      _ ____
 | \ | | ___  ___| |_   | / ___|
@@ -193,8 +193,7 @@ Depois abra o certificado que acabou de arrastar _clicando 2x_ e marque como a p
 
 Abra seu `main.ts` ou o arquivo _bootstrap_ da aplicação.
 
-```typescript
-@@filename(main)
+```ts
 
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
@@ -219,7 +218,7 @@ bootstrap();
 
 #### Agora no front, seu App PWA.
 
-```typescript
+```ts
 /**
     _                      _
    / \   _ __   __ _ _   _| | __ _ _ __
@@ -236,20 +235,20 @@ bootstrap();
 ng serve [project] --open --publicHost=localhost --ssl --sslCert=server/private/localhost.cert.pem --sslKey=server/private/localhost.key.pem
 ```
 
-```bash
+```sh
 $ ng build [project] --configuration=production
 ```
 
 Após build concluído, copie os arquivos pra dentro do diretório `dist`.
 
-```bash
+```sh
 $ cp server/private/localhost.cert.pem path/to/dist/folder/cert.pem
 $ cp server/private/localhost.key.pem path/to/dist/folder/key.pem
 ```
 
 #### Automatizando a cópia dos arquivos
 
-```typescript
+```ts
 // tools/scripts/copy-cert.ts
 
 const fs = require('fs');
@@ -291,7 +290,7 @@ Caso ainda não tenha o `http-server`, pode ver instruções no [npm](https://ww
 
 E é isso, agora já podemos executar os apps, e testar `local`.
 
-```bash
+```sh
 $ cd path/to/dist/folder
 $ http-server -S -C cert.pem -p 80 -o
 ```
@@ -311,7 +310,7 @@ Agora adicionamos scripts que realizam todas as últimas tarefas.
 }
 ```
 
-```bash
+```sh
 $ ng serve api
 $ npm run app:serve
 ```
@@ -319,3 +318,9 @@ $ npm run app:serve
 Lembre-se que você deve acessar o aplicativo pelo mesmo domínio que configurou quando gerou o certificado. Que neste caso, usamos localhost.
 
 A API pode ser configurada a porta em `src/main.ts`. Quando estiver rodando, abra o navegador e acesse `https://localhost:3000/`. Esperamos ver o cadeado verde na barra de URL.
+
+
+
+**_c-ya_**
+
+`[]s`

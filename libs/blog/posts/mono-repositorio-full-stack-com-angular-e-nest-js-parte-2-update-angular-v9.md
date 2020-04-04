@@ -1,7 +1,7 @@
 ---
 title: Mono repositorio full-stack com Angular e NestJS Parte 2 update angular v9
 description: Atualizando um workspace monorepo para Angular versão 9
-thumbnail: assets/images/guiseek-thumbnail.jpg
+thumbnail: assets/images/guiseek-thumbnail.webp
 cover: assets/blog/monorepo.svg
 video: G7bW2BNv6oo
 keywords:
@@ -20,19 +20,15 @@ publishedOn: 2020-02-26T00:00:00.000Z
 
 # Mono repositorio full-stack com Angular e NestJS Parte 2 update angular v9
 
-#### Série: _Mono repositório full-stack com Angular e NestJS_
-
-1. [Criando um workspace monorepo desde o inicio - Parte 1](/posts/mono-repositorio-full-stack-com-angular-e-nest-js)
-2. [Atualizando um workspace monorepo para Angular 9 - Parte 2](/posts/mono-repositorio-full-stack-com-angular-e-nest-js-parte-2-update-angular-v9)
-3. Compartilhando código e criando bibliotecas
-4. Gráfico de dependências, tasks `affected:*`
+### Quer saber como começar um projeto monorepo usando `NX`?
+Vá para este post: [Criando um workspace monorepo desde o inicio](/posts/mono-repositorio-full-stack-com-angular-e-nest-js)
 
 ---
 
 > **Nota**
 > Na Parte 1, usamos o comando:
 >
-> ```bash
+> ```sh
 > npx create-nx-workspace nx-pro
 > ```
 >
@@ -184,7 +180,7 @@ UPDATE package.json (2302 bytes)
 ** Executing migrations of package '@angular/core' **
 
 ❯ Static flag migration.
-  Removes the `static` flag from dynamic queries.
+  Removes the static flag from dynamic queries.
   As of Angular 9, the "static" flag defaults to false and is no longer required for your view and content queries.
   Read more about this here: https://v9.angular.io/guide/migration-dynamic-flag
   Migration completed.
@@ -230,7 +226,7 @@ Running migration @nrwl/cypress:update-8.12.0
 Successfully finished @nrwl/cypress:update-8.12.0
 ---------------------------------------------------------
 Running migration @nrwl/jest:update-9.0.0
-    \`jest-preset-angular\` 8.0.0 has restructured folders, introducing breaking changes to
+    jest-preset-angular 8.0.0 has restructured folders, introducing breaking changes to
     jest.config.js files.
 
     We are updating snapshotSerializers in each Angular project to include appropriate paths.
@@ -254,13 +250,13 @@ git reset --hard # Reset any changes
 git clean -fd # Delete newly added files and directories
 ```
 
+
+**_c-ya_**
+
 `[]s`
 
----
+----------
 
-### Série: _Mono repositório full-stack com Angular e NestJS_
 
-1. [Criando um workspace monorepo desde o inicio - Parte 1](/posts/mono-repositorio-full-stack-com-angular-e-nest-js)
-2. [Atualizando um workspace monorepo para Angular 9 - Parte 2](/posts/mono-repositorio-full-stack-com-angular-e-nest-js-parte-2-update-angular-v9)
-3. Compartilhando código e criando bibliotecas
-4. Gráfico de dependências, tasks `affected:*`
+### Quer saber como começar um projeto monorepo usando `NX`?
+Vá para este post: [Criando um workspace monorepo desde o inicio](/posts/mono-repositorio-full-stack-com-angular-e-nest-js)

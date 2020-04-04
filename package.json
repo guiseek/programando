@@ -40,9 +40,8 @@
     "deploy:blog": "firebase deploy --only hosting:blog",
     "open": "http-server -c-1 dist/static/apps/blog/ -o",
     "renew": "npm run build && npm run scully && npm run open",
-    "feature": "git flow feature start",
-    "new-post": "ng g @scullyio/init:post --target=libs/blog/posts --meta-data-file='libs/blog/feature-shell/blog-post-template.yaml' --name",
-    "new-course": "ng g @scullyio/init:post --target=libs/academy/cursos --meta-data-file='libs/academy/feature-shell/academy-course-template.yaml' --name"
+    "write": "git checkout -b",
+    "post": "ng g @scullyio/init:post --target=libs/blog/posts --meta-data-file='libs/blog/feature-shell/blog-post-template.yaml' --name"
   },
   "private": true,
   "dependencies": {

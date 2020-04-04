@@ -1,16 +1,13 @@
 ---
 title: PWA em iPhone iPad e Ipod
 description: Como resolver o caso do Safari não apresentar o popup perguntando se o usuário deseja adicionar o aplicativo?
-thumbnail: assets/images/guiseek-thumbnail.jpg
+thumbnail: assets/images/guiseek-thumbnail.webp
 cover: null
 video: null
 keywords:
   - pwa
   - angular
   - apple
-  - iPhone
-  - iPad
-  - iPod
 author: Guilherme Siquinelli
 mail: guiseek@gmail.com
 published: true
@@ -59,7 +56,7 @@ _Então crie seu serviço e seu componente._
 
 Identificando usuários iOS
 
-```javascript
+```js
 get iOS() {
   return /iphone|ipad|ipod/.test(
     window.navigator.userAgent.toLowerCase()
@@ -71,7 +68,7 @@ Identificando o modo de exibição do app, caso o usuário já tenha instalado, 
 
 Crie um tipo com as possibilidades de exibição.
 
-```javascript
+```js
 export type NavigatorDisplayMode =
   | 'fullscreen'
   | 'standalone'
@@ -81,7 +78,7 @@ export type NavigatorDisplayMode =
 
 Adicione ao serviço o método que retorna um boolean do método solicitado.
 
-```javascript
+```js
 inMode(mode: NavigatorDisplayMode) {
   return (mode in window.navigator) && window.navigator[mode];
 }
@@ -91,7 +88,7 @@ inMode(mode: NavigatorDisplayMode) {
 
 Com o componente criado, Adicione a mensagem de solicitação e um botão confirmando que o usuário leu.
 
-```javascript
+```js
 export class PwaAppleToastComponent implements OnInit {
 
   constructor(
@@ -150,7 +147,7 @@ Então podemos criar o método que analisa e toma a decisão de apresentar ou n�
 
 Adicione mais este método ao seu serviço.
 
-```javascript
+```js
 async showTipToInstall() {
   const wasShown = await get('tipToInstall');
 
@@ -165,7 +162,7 @@ async showTipToInstall() {
 
 Então o serviço está completo.
 
-```javascript
+```js
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -208,7 +205,7 @@ export class ToastService {
 
 Agora basta chama-lo no `bootstrap` do app, no meu caso adicionei app `ngOnInit` do `AppComponent`.
 
-```javascript
+```js
 @Component({
   selector: 'blog-root',
   templateUrl: './app.component.html',
@@ -227,6 +224,6 @@ Esta é a solução usada neste blog que está lendo!
 
 Espero ter ajudado.
 
-Abraços
+**_c-ya_**
 
-[]s
+`[]s`

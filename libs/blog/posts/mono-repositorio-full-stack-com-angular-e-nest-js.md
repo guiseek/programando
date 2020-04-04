@@ -27,13 +27,13 @@ publishedOn: 2020-02-25T00:00:00.000Z
 
 ### Vamos ver do que eu estou falando.
 
-```bash
+```sh
 npx create-nx-workspace nx-pro
 ```
 
 Então, selecione `angular-nest`
 
-```bash
+```sh
 ? What to create in the new workspace (Use arrow keys)
   empty             [an empty workspace]
   web components    [a workspace with a single app built using web components]
@@ -49,13 +49,13 @@ Então, selecione `angular-nest`
 
 Em seguida você tem que preencher o nome do seu `app frontend angular`, vou usar `webapp`.
 
-```bash
+```sh
 ? Application name webapp
 ```
 
 Agora nosso processador de estilos, vamos de `scss`.
 
-```bash
+```sh
 ? Default stylesheet format
   CSS
 ❯ SASS(.scss)  [ http://sass-lang.com   ]
@@ -65,7 +65,7 @@ Agora nosso processador de estilos, vamos de `scss`.
 
 Agora nosso `workspace` está sendo criado.
 
-```bash
+```sh
 Creating a sandbox with Nx...
 ⢀ @nrwl/cli@8.11.2
 ```
@@ -74,7 +74,7 @@ Creating a sandbox with Nx...
 
 Acesso o diretório do projeto criado
 
-```bash
+```sh
 cd nx-pro
 ```
 
@@ -83,7 +83,7 @@ cd nx-pro
 
 Podemos ver alguns schematics e builders disponíveis no projeto
 
-```bash
+```sh
 npm run nx list
 
 # ou
@@ -99,7 +99,7 @@ Pessoalmente eu prefiro usar o `yarn`, e não é _hype_, percebo que ele resolve
 
 Seu `nx list` deve ter retornado algo assim:
 
-```bash
+```sh
 $ nx list
 
 >  NX  Installed plugins :
@@ -133,13 +133,13 @@ $ nx list
 
 Plugins instalado e outros ainda disponíveis pra instalação. seguimos já servindo. Acretite ou não, já temos um `frontend` e um `backend` funcionando, _já com requisição `HTTP` e `CORS`_!
 
-```bsah
+```sh
 ng serve api
 ```
 
 Abra outro terminal
 
-```bash
+```sh
 ng serve webapp -o
 ```
 
@@ -156,18 +156,23 @@ Ao concluir verá algo como:
 
 Prático, não?
 
----
 
-Este será uma série de posts relacionados, no próximo vamos criar uma biliotéca compartilhada e comentar alguns `patterns` relacionados, ok?
+**_c-ya_**
+
+`[]s`
+
+----------
+
+<!-- Este será uma série de posts relacionados, no próximo vamos criar uma biliotéca compartilhada e comentar alguns `patterns` relacionados, ok? -->
 
 > **Update**:
 > _Adicionei um passo já como sendo segundo, pois vou mostrar como vamos migrar a versão do workspace para o **Angular 9**, assim aproveitamos pra usar novas feature dentro desse projeto._
 >
 > Vou mostrar como funciona o `nx migrate` na prática.
 
-### Série: _Mono repositório full-stack com Angular e NestJS_
 
-1. [Criando um workspace monorepo desde o inicio - Parte 1](/posts/mono-repositorio-full-stack-com-angular-e-nest-js)
-2. [Atualizando um workspace monorepo para Angular 9 - Parte 2](/posts/mono-repositorio-full-stack-com-angular-e-nest-js-parte-2-update-angular-v9)
-3. Compartilhando código e criando bibliotecas
-4. Gráfico de dependências, tasks `affected:*`
+1. [Criando um workspace monorepo desde o inicio](/posts/mono-repositorio-full-stack-com-angular-e-nest-js)
+2. [Atualizando um workspace monorepo para Angular 9](/posts/mono-repositorio-full-stack-com-angular-e-nest-js-parte-2-update-angular-v9)
+
+<!-- 3. Compartilhando código e criando bibliotecas
+4. Gráfico de dependências, tasks `affected:*` -->
