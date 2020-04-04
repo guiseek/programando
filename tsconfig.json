@@ -20,9 +20,6 @@
       "@webapp/common/ui/brand": ["libs/common/ui/brand/src/index.ts"],
       "@webapp/common/ui/video": ["libs/common/ui/video/src/index.ts"],
       "@webapp/common/ui/kit": ["libs/common/ui/kit/src/index.ts"],
-      "@webapp/portal/feature-shell": [
-        "libs/portal/feature-shell/src/index.ts"
-      ],
       "@webapp/common/ui/sidenav": ["libs/common/ui/sidenav/src/index.ts"],
       "@webapp/common/ui/cdk/accordion": [
         "libs/common/ui/cdk/accordion/src/index.ts"

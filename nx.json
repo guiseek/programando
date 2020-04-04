@@ -11,13 +11,6 @@
     "nx.json": "*"
   },
   "projects": {
-    "portal-open": {
-      "tags": []
-    },
-    "portal/open-e2e": {
-      "tags": [],
-      "implicitDependencies": ["portal-open"]
-    },
     "common-ui-brand": {
       "tags": ["scope:common", "type:ui"]
     },
@@ -26,9 +19,6 @@
     },
     "common-ui-kit": {
       "tags": ["scope:shared", "type:ui"]
-    },
-    "portal-feature-shell": {
-      "tags": ["scope:portal", "type:feature"]
     },
     "common-ui-sidenav": {
       "tags": ["scope:common", "type:ui"]
