@@ -41,8 +41,8 @@ registerLocaleData(localeBr, 'pt-BR', localeBrExtra);
         {
           path: 'conta',
           loadChildren: () =>
-            import('@webapp/shared/account/feature-account').then(
-              module => module.SharedAccountFeatureAccountModule
+            import('@webapp/shared/account/feature').then(
+              module => module.SharedAccountFeatureModule
             )
         }
       ],

@@ -12,47 +12,88 @@
   },
   "projects": {
     "common-ui-video": {
-      "tags": ["scope:common", "type:ui"]
+      "tags": [
+        "scope:common",
+        "type:ui"
+      ]
     },
     "common-ui-kit": {
-      "tags": ["scope:shared", "type:ui"]
+      "tags": [
+        "scope:shared",
+        "type:ui"
+      ]
     },
     "common-ui-cdk-accordion": {
-      "tags": ["scope:common", "type:ui"]
+      "tags": [
+        "scope:common",
+        "type:ui"
+      ]
     },
     "blog-feature-shell": {
-      "tags": ["scope:blog", "type:feature"]
+      "tags": [
+        "scope:blog",
+        "type:feature"
+      ]
     },
     "shared-data-access": {
-      "tags": ["scope:shared", "type:data-access"]
+      "tags": [
+        "scope:shared",
+        "type:data-access"
+      ]
     },
     "shared-auth": {
-      "tags": ["scope:shared", "type:feature"]
+      "tags": [
+        "scope:shared",
+        "type:feature"
+      ]
     },
     "common-ui-cdk-popover": {
-      "tags": ["scope:common", "type:ui"]
+      "tags": [
+        "scope:common",
+        "type:ui"
+      ]
     },
     "blog": {
-      "tags": ["scope:blog", "type:app"]
+      "tags": [
+        "scope:blog",
+        "type:app"
+      ]
     },
     "blog-e2e": {
       "tags": [],
-      "implicitDependencies": ["blog"]
+      "implicitDependencies": [
+        "blog"
+      ]
     },
     "shared-assets": {
-      "tags": ["type:assets", "scope:shared"]
+      "tags": [
+        "type:assets",
+        "scope:shared"
+      ]
     },
     "blog-posts": {
-      "tags": ["type:posts", "scope:blog"]
-    },
-    "shared-account-feature-account": {
-      "tags": ["scope:shared", "type:feature"]
+      "tags": [
+        "type:posts",
+        "scope:blog"
+      ]
     },
     "shared-account-data-access": {
-      "tags": ["scope:shared", "type:data-access"]
+      "tags": [
+        "scope:shared",
+        "type:data-access"
+      ]
     },
     "common-ui-nav": {
-      "tags": ["scope:common", "type:ui"]
+      "tags": [
+        "scope:common",
+        "type:ui"
+      ]
+    },
+    "shared-account-feature": {
+      "tags": [
+        "scope:shared",
+        "type:feature"
+      ]
     }
   }
 }

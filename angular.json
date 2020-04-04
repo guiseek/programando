@@ -14,7 +14,10 @@
               "libs/common/ui/video/tsconfig.lib.json",
               "libs/common/ui/video/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/common/ui/video/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/common/ui/video/**"
+            ]
           }
         },
         "test": {
@@ -46,7 +49,10 @@
               "libs/common/ui/kit/tsconfig.lib.json",
               "libs/common/ui/kit/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/common/ui/kit/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/common/ui/kit/**"
+            ]
           }
         },
         "test": {
@@ -113,7 +119,10 @@
               "libs/blog/feature-shell/tsconfig.lib.json",
               "libs/blog/feature-shell/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/blog/feature-shell/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/blog/feature-shell/**"
+            ]
           }
         },
         "test": {
@@ -145,7 +154,10 @@
               "libs/shared/data-access/tsconfig.lib.json",
               "libs/shared/data-access/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/data-access/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/data-access/**"
+            ]
           }
         },
         "test": {
@@ -177,7 +189,10 @@
               "libs/shared/auth/tsconfig.lib.json",
               "libs/shared/auth/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/auth/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/auth/**"
+            ]
           }
         },
         "test": {
@@ -209,7 +224,10 @@
               "libs/common/ui/cdk/popover/tsconfig.lib.json",
               "libs/common/ui/cdk/popover/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/common/ui/cdk/popover/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/common/ui/cdk/popover/**"
+            ]
           }
         },
         "test": {
@@ -270,9 +288,13 @@
               "apps/blog/src/sitemap.xml",
               "apps/blog/src/manifest.webmanifest"
             ],
-            "styles": ["apps/blog/src/styles.scss"],
+            "styles": [
+              "apps/blog/src/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared/assets/src/styles"]
+              "includePaths": [
+                "libs/shared/assets/src/styles"
+              ]
             },
             "scripts": []
           },
@@ -333,7 +355,10 @@
               "apps/blog/tsconfig.app.json",
               "apps/blog/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/blog/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/blog/**"
+            ]
           }
         },
         "test": {
@@ -374,8 +399,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/blog-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/blog-e2e/**"]
+            "tsConfig": [
+              "apps/blog-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/blog-e2e/**"
+            ]
           }
         }
       }
@@ -393,41 +423,6 @@
       "projectType": "library",
       "schematics": {},
       "architect": {}
-    },
-    "shared-account-feature-account": {
-      "projectType": "library",
-      "root": "libs/shared/account/feature-account",
-      "sourceRoot": "libs/shared/account/feature-account/src",
-      "prefix": "webapp",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/shared/account/feature-account/tsconfig.lib.json",
-              "libs/shared/account/feature-account/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/account/feature-account/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shared/account/feature-account/jest.config.js",
-            "tsConfig": "libs/shared/account/feature-account/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/shared/account/feature-account/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
     },
     "shared-account-data-access": {
       "projectType": "library",
@@ -473,7 +468,10 @@
               "libs/common/ui/nav/tsconfig.lib.json",
               "libs/common/ui/nav/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/common/ui/nav/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/common/ui/nav/**"
+            ]
           }
         },
         "test": {
@@ -483,6 +481,41 @@
             "tsConfig": "libs/common/ui/nav/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/common/ui/nav/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-account-feature": {
+      "projectType": "library",
+      "root": "libs/shared/account/feature",
+      "sourceRoot": "libs/shared/account/feature/src",
+      "prefix": "webapp",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/account/feature/tsconfig.lib.json",
+              "libs/shared/account/feature/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/account/feature/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/account/feature/jest.config.js",
+            "tsConfig": "libs/shared/account/feature/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/account/feature/src/test-setup.ts"
           }
         }
       },

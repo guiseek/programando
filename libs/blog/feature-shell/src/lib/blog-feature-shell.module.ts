@@ -40,14 +40,7 @@ import { ShellComponent } from './shell/shell.component';
           //   redirectTo: ''
           // }
         ]
-      },
-      // {
-      //   path: 'conta',
-      //   loadChildren: () =>
-      //     import('@webapp/shared/account/feature-account').then(
-      //       module => module.SharedAccountFeatureAccountModule
-      //     )
-      // }
+      }
     ])
   ],
   declarations: [

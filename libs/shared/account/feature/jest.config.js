@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'shared-account-feature-account',
+  name: 'shared-account-feature',
   preset: '../../../../jest.config.js',
-  coverageDirectory: '../../../../coverage/libs/shared/account/feature-account',
+  coverageDirectory: '../../../../coverage/libs/shared/account/feature',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

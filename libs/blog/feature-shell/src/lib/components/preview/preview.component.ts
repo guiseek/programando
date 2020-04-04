@@ -1,9 +1,4 @@
-import {
-  Component,
-  Input,
-  OnInit,
-  OnChanges
-} from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -24,7 +19,7 @@ export class PreviewComponent implements OnInit, OnChanges {
   ) {}
 
   ngOnInit() {
-    this.loadPosts();
+    // this.loadPosts();
   }
 
   ngOnChanges() {
@@ -32,13 +27,14 @@ export class PreviewComponent implements OnInit, OnChanges {
   }
 
   private loadPosts() {
+    console.log('load');
+
     this.blogPostData$ = this.scully.available$.pipe(
       map(routeList => {
-        console.log(routeList);
         return routeList
           .filter((route: ScullyRoute) => route.route.startsWith(`/posts/`))
           .filter((route: ScullyRoute) => route.published !== false)
-          .reverse();
+          // .reverse();
       }),
       map(routeList => {
         if (!this.keyword) {

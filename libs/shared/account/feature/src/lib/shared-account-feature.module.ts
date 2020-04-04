@@ -30,4 +30,4 @@ import { AccountContainer } from './containers/account/account.container';
   ],
   declarations: [AccountContainer, ProfileFormComponent, UpdatePasswordComponent]
 })
-export class SharedAccountFeatureAccountModule {}
+export class SharedAccountFeatureModule {}
