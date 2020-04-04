@@ -4,7 +4,7 @@ import { AuthButtonRequest } from './auth-button.request';
 @Component({
   selector: 'auth-github-button',
   template: `
-    <button type="button" class="github" mat-icon-button (click)="in('github')">
+    <button type="button" aria-label="Botão para logar com Github" class="github" mat-icon-button (click)="in('github')">
       <mat-icon svgIcon="github"></mat-icon>
     </button>
   `,

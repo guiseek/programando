@@ -15,22 +15,6 @@ ui-sidenav-item .mat-list-base .mat-list-item .mat-list-item-content {
   color: $red-color;
 }
 
-.cdk-overlay-pane.sign {
-  border-radius: 100px;
-  overflow: hidden;
-  opacity: 0.9;
-  .mat-dialog-container {
-    padding: 0;
-
-    button.google {
-      margin-right: 4px;
-    }
-    button.github {
-      margin-left: 4px;
-    }
-  }
-}
-
 .features .mat-card {
   padding-bottom: 0;
 

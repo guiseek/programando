@@ -1,13 +1,39 @@
-:host {
+.mat-tooltip-panel {
+  .auth-button-tooltip {
+    background: #212121;
+    color: #ffffff;
+    font-size: 0.86em;
+  }
+}
+
+auth-dialog {
   display: flex;
   background: #212121;
   justify-content: space-between;
   align-items: center;
+  padding: 2px 0 2px 2px;
 
+  overflow: hidden;
+
+  input[type="datetime-local"] {
+    display: none;
+  }
+  .mat-icon-button {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  auth-github-button {
+    -webkit-animation: blinking 2.5s ease-in-out both;
+    animation: blinking 2.5s ease-in-out both;
+  }
   auth-google-button,
   auth-github-button {
-    transition: transform 250ms ease-in-out;
+    opacity: 0.8;
+    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
     &:hover {
+      opacity: 1;
       transform: scale(1.2);
     }
   }

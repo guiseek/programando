@@ -2,6 +2,7 @@
 @import 'scss/themes/default.scss';
 @import 'scss/layout';
 @import 'scss/partials/blog';
+@import 'scss/partials/auth';
 @import 'scss/custom-components';
 
 html,
@@ -12,4 +13,8 @@ body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   font-size: 1.1rem;
+}
+.auth-button-tooltip {
+  background: #212121;
+  color: #ffffff;
 }
