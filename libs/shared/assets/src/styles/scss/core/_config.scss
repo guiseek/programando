@@ -19,4 +19,12 @@ $red-color: #ed2945;
 
 $number-columns: 12;
 
+$shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
+$shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
+
+// Sizes for shadows
+$shadow-small: 10px 19px 17px -13px $shadow-color-regular !default;
+$shadow-regular: 15px 28px 25px -18px $shadow-color-regular !default;
+$shadow-large: 20px 38px 34px -26px $shadow-color-regular !default;
+$shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
 

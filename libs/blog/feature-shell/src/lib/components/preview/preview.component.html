@@ -4,6 +4,8 @@
 
     <article *ngFor="let post of blogPosts; let i = index" class="col-fill sm-12 xs-12 md-6 lg-6">
 
+      <meta itemprop="name headline" [attr.content]="post.title" />
+
       <mat-card class="blog-post-card">
 
         <ng-container *ngIf="post.cover">
@@ -12,13 +14,15 @@
           </a>
         </ng-container>
 
-        <h1 itemprop="name headline" class="mat-display-1">
+        <!-- <h1 itemprop="name headline" class="mat-display-1">
           <a [routerLink]="post.route">
             {{ post.title }}
           </a>
-        </h1>
+        </h1> -->
 
-
+        <p mat-card-content itemprop="abstract">
+          {{ post.description }}
+        </p>
 
         <div class="keywords" *ngIf="post.keywords">
           <a *ngFor="let keyword of post.keywords" routerLink="/" [queryParams]="{ keyword: keyword }">
@@ -27,12 +31,6 @@
             </span>
           </a>
         </div>
-
-        <p mat-card-content itemprop="abstract">
-
-          {{ post.description }}
-
-        </p>
 
         <mat-card-header itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img itemprop="image" mat-card-avatar [src]="post.thumbnail" [attr.alt]="post.description" />
