@@ -1,13 +1,13 @@
-import {
-  ComponentType,
-  ConnectionPositionPair,
-  Overlay
-} from '@angular/cdk/overlay';
-import {
-  ComponentPortal,
-  PortalInjector,
-  TemplatePortal
-} from '@angular/cdk/portal';
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
+import { ComponentType, ConnectionPositionPair, Overlay } from '@angular/cdk/overlay';
+import { ComponentPortal, PortalInjector, TemplatePortal } from '@angular/cdk/portal';
 import { ElementRef, Injectable, Injector, TemplateRef } from '@angular/core';
 import { defaultConfig, PopoverConfig, POPOVER_DATA } from './popover-config';
 import { PopoverRef } from './popover-ref';

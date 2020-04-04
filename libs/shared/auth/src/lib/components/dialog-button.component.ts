@@ -1,16 +1,16 @@
-import {
-  Component,
-  OnInit,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  Output,
-  EventEmitter,
-  OnDestroy
-} from '@angular/core';
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
+import { ChangeDetectionStrategy, Component, EventEmitter, OnDestroy, Output, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../containers/dialog/dialog.component';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { DialogComponent } from '../containers/dialog/dialog.component';
 
 @Component({
   selector: 'auth-dialog-button',

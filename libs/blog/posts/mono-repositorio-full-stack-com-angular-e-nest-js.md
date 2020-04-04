@@ -1,8 +1,8 @@
 ---
 title: Mono repositorio full-stack com Angular e NestJS
 description: Criando um workspace monorepo desde o inicio
-thumbnail: assets/images/guiseek-thumbnail.jpg
-cover: assets/blog/monorepo.svg
+thumbnail: assets/images/guiseek-thumbnail.webp
+cover: assets/covers/monorepo-nx.webp
 video: null
 canonicalUrl: 'https://programando.web.app/posts/mono-repositorio-full-stack-com-angular-e-nest-js'
 keywords:
@@ -14,6 +14,8 @@ keywords:
   - full-stack
 author: Guilherme Siquinelli
 mail: guiseek@gmail.com
+language: pt-br
+relevance: 9
 published: true
 updated: 2020-02-25
 publishedOn: 2020-02-25T00:00:00.000Z

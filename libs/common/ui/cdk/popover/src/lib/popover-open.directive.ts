@@ -1,12 +1,13 @@
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
 import { ComponentType } from '@angular/cdk/portal';
-import {
-  Directive,
-  ElementRef,
-  HostListener,
-  Input,
-  Optional,
-  TemplateRef
-} from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, Optional, TemplateRef } from '@angular/core';
 import { PopoverRef } from './popover-ref';
 import { UiPopoverService } from './popover.service';
 

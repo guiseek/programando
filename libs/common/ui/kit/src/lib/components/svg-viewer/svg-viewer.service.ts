@@ -1,6 +1,14 @@
-import { Injectable, Optional } from '@angular/core';
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
 import { HttpClient } from '@angular/common/http';
-import { of, Observable } from 'rxjs';
+import { Injectable, Optional } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { catchError, finalize, map, share } from 'rxjs/operators';
 import { SvgViewerConfig } from './svg-viewer.config';
 

@@ -1,3 +1,11 @@
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
 export const firebaseError = {
   'auth/app-deleted': 'O banco de dados não foi localizado.',
   'auth/expired-action-code': 'O código da ação o ou link expirou.',

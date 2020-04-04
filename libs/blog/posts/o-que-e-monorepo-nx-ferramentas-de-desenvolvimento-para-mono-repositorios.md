@@ -1,8 +1,8 @@
 ---
 title: 'O que e monorepo?'
 description: 'NX: ferramentas de desenvolvimento para mono repositorios'
-thumbnail: assets/images/guiseek-thumbnail.jpg
-cover: null
+thumbnail: assets/images/guiseek-thumbnail.webp
+cover: assets/covers/nx.webp
 video: null
 canonicalUrl: 'https://programando.web.app/posts/o-que-e-monorepo-nx-ferramentas-de-desenvolvimento-para-mono-repositorios'
 keywords:
@@ -13,6 +13,8 @@ keywords:
   - full-stack
 author: Guilherme Siquinelli
 mail: guiseek@gmail.com
+language: pt-br
+relevance: 4
 published: true
 updated: 2020-03-02
 publishedOn: 2020-03-02T00:00:00.000Z

@@ -34,6 +34,10 @@ ui-sidenav-item .mat-list-base .mat-list-item .mat-list-item-content {
   }
   .mat-card-content {
     font-size: 1.2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   .mat-card-header {
     align-items: center;

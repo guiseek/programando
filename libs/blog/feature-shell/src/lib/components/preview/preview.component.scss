@@ -9,10 +9,14 @@
   // display: flex;
   // flex-flow: wrap;
   article {
+    display: flex;
     // max-width: 50%;
     // padding: 8px;
 
     .mat-card {
+      display: flex;
+      flex-direction: column;
+
       overflow: hidden;
       // cursor: pointer;
       margin: 12px;
@@ -24,6 +28,7 @@
 
       p.mat-card-content {
         margin-top: 0;
+        flex: 1;
       }
       .mat-card-image {
         height: 200px;

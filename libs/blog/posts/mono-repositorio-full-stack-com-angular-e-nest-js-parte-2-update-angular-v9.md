@@ -2,7 +2,7 @@
 title: Mono repositorio full-stack com Angular e NestJS Parte 2 update angular v9
 description: Atualizando um workspace monorepo para Angular versão 9
 thumbnail: assets/images/guiseek-thumbnail.webp
-cover: assets/blog/monorepo.svg
+cover: assets/covers/nx-migrate.webp
 video: G7bW2BNv6oo
 canonicalUrl: 'https://programando.web.app/posts/mono-repositorio-full-stack-com-angular-e-nest-js-parte-2-update-angular-v9'
 keywords:
@@ -14,6 +14,8 @@ keywords:
   - full-stack
 author: Guilherme Siquinelli
 mail: guiseek@gmail.com
+language: pt-br
+relevance: 6
 published: true
 updated: 2020-02-26
 publishedOn: 2020-02-26T00:00:00.000Z

@@ -1,7 +1,15 @@
-import { Observable, fromEvent } from 'rxjs';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { pluck, filter, debounceTime, distinctUntilChanged } from 'rxjs/operators';
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { fromEvent, Observable } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, pluck } from 'rxjs/operators';
 
 @Component({
   selector: 'blog-overview',

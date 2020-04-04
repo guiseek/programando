@@ -2,7 +2,7 @@
 title: PWA em iPhone iPad e Ipod
 description: Como resolver o caso do Safari não apresentar o popup perguntando se o usuário deseja adicionar o aplicativo?
 thumbnail: assets/images/guiseek-thumbnail.webp
-cover: null
+cover: assets/covers/safari-webkit.webp
 video: null
 canonicalUrl: 'https://programando.web.app/posts/pwa-em-i-phone-i-pad-e-ipod'
 keywords:

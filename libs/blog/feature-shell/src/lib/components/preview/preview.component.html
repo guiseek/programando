@@ -2,7 +2,7 @@
 
   <ng-container *ngIf="blogPosts.length; else emptyResultsTemplate">
 
-    <article *ngFor="let post of blogPosts; let i = index" class="col-fill sm-12 xs-12 md-6 lg-6">
+    <article *ngFor="let post of blogPosts; let i = index" class="row-fill col-fill sm-12 xs-12 md-6 lg-6">
 
       <meta itemprop="name headline" [attr.content]="post.title" />
 

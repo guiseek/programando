@@ -1,7 +1,15 @@
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
+import { Component, Inject, Optional } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { AuthService } from '@webapp/shared/data-access';
-import { Component, OnInit, Optional, Inject } from '@angular/core';
 import { PopoverRef, POPOVER_DATA } from '@webapp/common/ui/cdk/popover';
+import { AuthService } from '@webapp/shared/data-access';
 import { User } from 'firebase/app';
 
 @Component({

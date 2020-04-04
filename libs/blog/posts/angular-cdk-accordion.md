@@ -11,6 +11,8 @@ keywords:
   - material
 author: Guilherme Siquinelli
 mail: guiseek@gmail.com
+language: pt-br
+relevance: 7
 published: true
 updated: 2020-03-01
 publishedOn: 2020-03-01T00:00:00.000Z

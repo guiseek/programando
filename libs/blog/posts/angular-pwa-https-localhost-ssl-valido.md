@@ -1,7 +1,7 @@
 ---
 title: Angular PWA HTTPS localhost SSL válido
 description: Configurando certificado SSL para desenvolvimento em ambiente local
-thumbnail: assets/images/guiseek-thumbnail.jpg
+thumbnail: assets/images/guiseek-thumbnail.webp
 cover: /assets/covers/angular-pwa-https-localhost-ssl-valido.webp
 video:
 canonicalUrl: 'https://programando.web.app/posts/angular-pwa-https-localhost-ssl-valido'
@@ -13,6 +13,8 @@ keywords:
   - https
 author: Guilherme Siquinelli
 mail: guiseek@gmail.com
+language: pt-br
+relevance: 8
 published: true
 updated: 2020-02-27
 publishedOn: 2020-02-27T00:00:00.000Z

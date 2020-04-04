@@ -1,11 +1,19 @@
-import { AuthAccount } from './models/auth-account.model';
-import { AuthUser } from './models/auth-user.model';
-import { firebaseError } from './messages/firebase-errors';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { firebaseError } from './messages/firebase-errors';
+import { AuthAccount } from './models/auth-account.model';
+import { AuthUser } from './models/auth-user.model';
 
 export type authProviders = 'google' | 'github';
 // export type authProviderIDs = 'google.com' | 'github';

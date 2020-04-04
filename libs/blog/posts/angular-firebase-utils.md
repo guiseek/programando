@@ -12,6 +12,8 @@ keywords:
   - javascript
 author: Guilherme Siquinelli
 mail: guiseek@gmail.com
+language: pt-br
+relevance: 9
 published: true
 updated: 2020-04-05T00:00:00.000Z
 publishedOn: 2020-04-05T00:00:00.000Z

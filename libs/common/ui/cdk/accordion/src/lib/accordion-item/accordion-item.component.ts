@@ -1,12 +1,14 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { CdkAccordionItem } from '@angular/cdk/accordion';
-import {
-  trigger,
-  state,
-  style,
-  transition,
-  animate
-} from '@angular/animations';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'ui-accordion-item',

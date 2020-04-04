@@ -1,3 +1,11 @@
+/*
+ * ----------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
+ * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
+ * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
+ * ----------------------------------------------------------------------------------------
+ */
 import { Component } from '@angular/core';
 import { NavItem } from '@webapp/shared/data-access';
 
@@ -34,25 +42,3 @@ export class ShellComponent {
     }
   ];
 }
-
-/**
- *   // src = '/assets/angular.mp4';
-  src = 'http://192.168.15.33:8080/Migrate%20NX%208%20para%209.mp4';
-  // src = 'https://nkoehler.github.io/mat-video/assets/NASA.mp4';
-  width = 600;
-  height = 337.5;
-  currentTime = 0;
-  autoplay = false;
-  preload = false;
-  loop = false;
-  quality = true;
-  download = false;
-  fullscreen = true;
-  showFrameByFrame = false;
-  keyboard = true;
-  color = 'primary';
-  spinner = 'spin';
-  poster = 'assets/angular-firebase-nestjs.svg';
-  overlay = null;
-  muted = false;
- */
