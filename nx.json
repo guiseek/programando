@@ -11,9 +11,6 @@
     "nx.json": "*"
   },
   "projects": {
-    "common-ui-brand": {
-      "tags": ["scope:common", "type:ui"]
-    },
     "common-ui-video": {
       "tags": ["scope:common", "type:ui"]
     },

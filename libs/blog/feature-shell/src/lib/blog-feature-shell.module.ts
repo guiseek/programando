@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { CommonUiBrandModule } from '@webapp/common/ui/brand';
 import { CommonUiCdkPopoverModule } from '@webapp/common/ui/cdk/popover';
 import { CommonUiKitModule, CommonUiMaterialModule } from '@webapp/common/ui/kit';
 import { CommonUiNavbarModule } from '@webapp/common/ui/navbar';
@@ -19,7 +18,7 @@ import { ShellComponent } from './shell/shell.component';
   imports: [
     ScullyLibModule,
     CommonUiKitModule,
-    CommonUiBrandModule,
+    // CommonUiBrandModule,
     CommonUiMaterialModule,
     CommonUiToolbarModule,
     CommonUiNavbarModule,

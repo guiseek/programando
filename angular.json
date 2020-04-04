@@ -1,38 +1,6 @@
 {
   "version": 1,
   "projects": {
-    "common-ui-brand": {
-      "projectType": "library",
-      "root": "libs/common/ui/brand",
-      "sourceRoot": "libs/common/ui/brand/src",
-      "prefix": "ui",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/common/ui/brand/tsconfig.lib.json",
-              "libs/common/ui/brand/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/common/ui/brand/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/common/ui/brand/jest.config.js",
-            "tsConfig": "libs/common/ui/brand/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/common/ui/brand/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "common-ui-video": {
       "projectType": "library",
       "root": "libs/common/ui/video",

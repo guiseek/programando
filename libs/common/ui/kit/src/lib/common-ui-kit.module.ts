@@ -1,17 +1,18 @@
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { HighlightService } from './services/highlight.service';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TitleDirective } from './directives/title.directive';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ToggleThemeButton } from './components/toggle-theme/toggle-theme.button';
-import { SvgViewerComponent } from './components/svg-viewer/svg-viewer.component';
-import { SvgViewerService } from './components/svg-viewer/svg-viewer.service';
-import { SvgViewerDefaultConfig } from './components/svg-viewer/svg-viewer.config';
-import { SnackMessageComponent } from './components/snack-message/snack-message.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { IconComponent } from './components/icon/icon.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { SnackMessageComponent } from './components/snack-message/snack-message.component';
+import { SvgViewerComponent } from './components/svg-viewer/svg-viewer.component';
+import { SvgViewerDefaultConfig } from './components/svg-viewer/svg-viewer.config';
+import { SvgViewerService } from './components/svg-viewer/svg-viewer.service';
+import { ToggleThemeButton } from './components/toggle-theme/toggle-theme.button';
+import { TitleDirective } from './directives/title.directive';
+import { HighlightService } from './services/highlight.service';
 import { SearchService } from './services/search.service';
 import { SeoService } from './services/seo.service';
 
@@ -33,6 +34,7 @@ const CommonModules = [
     ToggleThemeButton,
     SvgViewerComponent,
     SnackMessageComponent,
+    LogoComponent,
     IconComponent
   ],
   exports: [
@@ -41,6 +43,7 @@ const CommonModules = [
     ToggleThemeButton,
     SvgViewerComponent,
     SnackMessageComponent,
+    LogoComponent,
     IconComponent
   ],
   providers: [

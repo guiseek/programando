@@ -5,8 +5,10 @@
     position: absolute;
     width: inherit;
     height: inherit;
-    transition: 300ms transform ease-in-out, 300ms opacity ease-in-out,
-      300ms filter ease-in-out;
+    transition: 300ms transform ease-in-out, 300ms opacity ease-in-out
+    // , 800ms filter ease-in-out;
+    // transition: 300ms transform ease-in-out, 300ms opacity ease-in-out,
+    //   300ms filter ease-in-out;
   }
   &:hover {
     .fire {
@@ -17,8 +19,8 @@
     }
     .uig {
       transform: scale(0.6);
-      filter: blur(0.6rem);
-      opacity: 0.8;
+      // filter: blur(0.6rem);
+      opacity: 0.4;
     }
   }
 }
