@@ -1,19 +1,19 @@
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { registerLocaleData } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import localeBrExtra from '@angular/common/locales/extra/br';
+import localeBr from '@angular/common/locales/pt';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
-import { environment } from '@webapp/env';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { NgModule, DEFAULT_CURRENCY_CODE, LOCALE_ID } from '@angular/core';
-import { registerLocaleData } from '@angular/common';
-import localeBr from '@angular/common/locales/pt';
-import localeBrExtra from '@angular/common/locales/extra/br';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { ScullyLibModule } from '@scullyio/ng-lib';
+import { RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { ScullyLibModule } from '@scullyio/ng-lib';
+import { environment } from '@webapp/env';
+import { AppComponent } from './app.component';
 
 registerLocaleData(localeBr, 'pt-BR', localeBrExtra);
 
@@ -37,6 +37,13 @@ registerLocaleData(localeBr, 'pt-BR', localeBrExtra);
               m => m.BlogFeatureShellModule
             ),
           data: { preload: true }
+        },
+        {
+          path: 'conta',
+          loadChildren: () =>
+            import('@webapp/shared/account/feature-account').then(
+              module => module.SharedAccountFeatureAccountModule
+            )
         }
       ],
       {

@@ -19,7 +19,6 @@
       "@webapp/env": ["environments/environment.ts"],
       "@webapp/common/ui/video": ["libs/common/ui/video/src/index.ts"],
       "@webapp/common/ui/kit": ["libs/common/ui/kit/src/index.ts"],
-      "@webapp/common/ui/sidenav": ["libs/common/ui/sidenav/src/index.ts"],
       "@webapp/common/ui/cdk/accordion": [
         "libs/common/ui/cdk/accordion/src/index.ts"
       ],
@@ -29,14 +28,13 @@
       "@webapp/common/ui/cdk/popover": [
         "libs/common/ui/cdk/popover/src/index.ts"
       ],
-      "@webapp/common/ui/navbar": ["libs/common/ui/navbar/src/index.ts"],
-      "@webapp/common/ui/toolbar": ["libs/common/ui/toolbar/src/index.ts"],
       "@webapp/shared/account/feature-account": [
         "libs/shared/account/feature-account/src/index.ts"
       ],
       "@webapp/shared/account/data-access": [
         "libs/shared/account/data-access/src/index.ts"
-      ]
+      ],
+      "@webapp/common/ui/nav": ["libs/common/ui/nav/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

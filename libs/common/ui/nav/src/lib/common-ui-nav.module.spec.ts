@@ -1,14 +1,14 @@
 import { async, TestBed } from '@angular/core/testing';
-import { CommonUiNavbarModule } from './common-ui-navbar.module';
+import { CommonUiNavModule } from './common-ui-nav.module';
 
-describe('CommonUiNavbarModule', () => {
+describe('CommonUiNavModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [CommonUiNavbarModule]
+      imports: [CommonUiNavModule]
     }).compileComponents();
   }));
 
   it('should create', () => {
-    expect(CommonUiNavbarModule).toBeDefined();
+    expect(CommonUiNavModule).toBeDefined();
   });
 });

@@ -2,7 +2,7 @@
 
   <ng-content select="ui-toolbar-button"></ng-content>
 
-  <ng-content select="ui-toolbar-brand"></ng-content>
+  <ng-content select="ui-toolbar-logo"></ng-content>
 
   <div fxFlex>
     <ng-content></ng-content>
@@ -10,11 +10,10 @@
 
   <div fxFlex="30%" fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="end center">
 
-    <ng-content select="ui-toolbar-search"></ng-content>
-
     <ng-content select="ui-toolbar-icon"></ng-content>
 
     <ng-content select="ui-toolbar-menu"></ng-content>
+
   </div>
 
 </mat-toolbar>

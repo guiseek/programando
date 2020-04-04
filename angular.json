@@ -65,38 +65,6 @@
         }
       }
     },
-    "common-ui-sidenav": {
-      "projectType": "library",
-      "root": "libs/common/ui/sidenav",
-      "sourceRoot": "libs/common/ui/sidenav/src",
-      "prefix": "ui",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/common/ui/sidenav/tsconfig.lib.json",
-              "libs/common/ui/sidenav/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/common/ui/sidenav/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/common/ui/sidenav/jest.config.js",
-            "tsConfig": "libs/common/ui/sidenav/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/common/ui/sidenav/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "common-ui-cdk-accordion": {
       "projectType": "library",
       "root": "libs/common/ui/cdk/accordion",
@@ -412,70 +380,6 @@
         }
       }
     },
-    "common-ui-navbar": {
-      "projectType": "library",
-      "root": "libs/common/ui/navbar",
-      "sourceRoot": "libs/common/ui/navbar/src",
-      "prefix": "ui",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/common/ui/navbar/tsconfig.lib.json",
-              "libs/common/ui/navbar/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/common/ui/navbar/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/common/ui/navbar/jest.config.js",
-            "tsConfig": "libs/common/ui/navbar/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/common/ui/navbar/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
-    "common-ui-toolbar": {
-      "projectType": "library",
-      "root": "libs/common/ui/toolbar",
-      "sourceRoot": "libs/common/ui/toolbar/src",
-      "prefix": "ui",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/common/ui/toolbar/tsconfig.lib.json",
-              "libs/common/ui/toolbar/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/common/ui/toolbar/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/common/ui/toolbar/jest.config.js",
-            "tsConfig": "libs/common/ui/toolbar/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/common/ui/toolbar/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "shared-assets": {
       "root": "libs/shared/assets",
       "sourceRoot": "libs/shared/assets/src",
@@ -555,6 +459,38 @@
         }
       },
       "schematics": {}
+    },
+    "common-ui-nav": {
+      "projectType": "library",
+      "root": "libs/common/ui/nav",
+      "sourceRoot": "libs/common/ui/nav/src",
+      "prefix": "ui",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/ui/nav/tsconfig.lib.json",
+              "libs/common/ui/nav/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/common/ui/nav/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/common/ui/nav/jest.config.js",
+            "tsConfig": "libs/common/ui/nav/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/common/ui/nav/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

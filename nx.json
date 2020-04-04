@@ -17,9 +17,6 @@
     "common-ui-kit": {
       "tags": ["scope:shared", "type:ui"]
     },
-    "common-ui-sidenav": {
-      "tags": ["scope:common", "type:ui"]
-    },
     "common-ui-cdk-accordion": {
       "tags": ["scope:common", "type:ui"]
     },
@@ -42,12 +39,6 @@
       "tags": [],
       "implicitDependencies": ["blog"]
     },
-    "common-ui-navbar": {
-      "tags": ["scope:common", "type:ui"]
-    },
-    "common-ui-toolbar": {
-      "tags": ["scope:common", "type:ui"]
-    },
     "shared-assets": {
       "tags": ["type:assets", "scope:shared"]
     },
@@ -59,6 +50,9 @@
     },
     "shared-account-data-access": {
       "tags": ["scope:shared", "type:data-access"]
+    },
+    "common-ui-nav": {
+      "tags": ["scope:common", "type:ui"]
     }
   }
 }

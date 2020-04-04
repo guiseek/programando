@@ -5,8 +5,9 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { CommonUiCdkPopoverModule } from '@webapp/common/ui/cdk/popover';
 import { CommonUiKitModule, CommonUiMaterialModule } from '@webapp/common/ui/kit';
-import { CommonUiNavbarModule } from '@webapp/common/ui/navbar';
-import { CommonUiToolbarModule } from '@webapp/common/ui/toolbar';
+// import { CommonUiNavbarModule } from '@webapp/common/ui/navbar';
+// import { CommonUiToolbarModule } from '@webapp/common/ui/toolbar';
+import { CommonUiNavModule } from '@webapp/common/ui/nav';
 import { SharedAuthModule } from '@webapp/shared/auth';
 import { PreviewComponent } from './components/preview/preview.component';
 import { OverviewComponent } from './overview/overview.component';
@@ -20,8 +21,9 @@ import { ShellComponent } from './shell/shell.component';
     CommonUiKitModule,
     // CommonUiBrandModule,
     CommonUiMaterialModule,
-    CommonUiToolbarModule,
-    CommonUiNavbarModule,
+    CommonUiNavModule,
+    // CommonUiToolbarModule,
+    // CommonUiNavbarModule,
     CommonUiCdkPopoverModule,
     SharedAuthModule,
     YouTubePlayerModule,
@@ -39,13 +41,13 @@ import { ShellComponent } from './shell/shell.component';
           // }
         ]
       },
-      {
-        path: 'conta',
-        loadChildren: () =>
-          import('@webapp/shared/account/feature-account').then(
-            module => module.SharedAccountFeatureAccountModule
-          )
-      }
+      // {
+      //   path: 'conta',
+      //   loadChildren: () =>
+      //     import('@webapp/shared/account/feature-account').then(
+      //       module => module.SharedAccountFeatureAccountModule
+      //     )
+      // }
     ])
   ],
   declarations: [
