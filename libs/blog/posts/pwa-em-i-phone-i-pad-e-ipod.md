@@ -4,6 +4,7 @@ description: Como resolver o caso do Safari não apresentar o popup perguntando 
 thumbnail: assets/images/guiseek-thumbnail.webp
 cover: null
 video: null
+canonicalUrl: 'https://programando.web.app/posts/pwa-em-i-phone-i-pad-e-ipod'
 keywords:
   - pwa
   - angular

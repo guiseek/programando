@@ -4,6 +4,7 @@ description: Criando um workspace monorepo desde o inicio
 thumbnail: assets/images/guiseek-thumbnail.jpg
 cover: assets/blog/monorepo.svg
 video: null
+canonicalUrl: 'https://programando.web.app/posts/mono-repositorio-full-stack-com-angular-e-nest-js'
 keywords:
   - angular
   - nest

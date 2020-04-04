@@ -10,54 +10,36 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@webapp/env": [
-        "environments/environment.ts"
-      ],
-      "@webapp/common/ui/video": [
-        "libs/common/ui/video/src/index.ts"
-      ],
-      "@webapp/common/ui/kit": [
-        "libs/common/ui/kit/src/index.ts"
-      ],
+      "@webapp/env": ["environments/environment.ts"],
+      "@webapp/common/ui/video": ["libs/common/ui/video/src/index.ts"],
+      "@webapp/common/ui/kit": ["libs/common/ui/kit/src/index.ts"],
       "@webapp/common/ui/cdk/accordion": [
         "libs/common/ui/cdk/accordion/src/index.ts"
       ],
-      "@webapp/blog/feature-shell": [
-        "libs/blog/feature-shell/src/index.ts"
-      ],
-      "@webapp/shared/data-access": [
-        "libs/shared/data-access/src/index.ts"
-      ],
-      "@webapp/shared/auth": [
-        "libs/shared/auth/src/index.ts"
-      ],
+      "@webapp/blog/feature-shell": ["libs/blog/feature-shell/src/index.ts"],
+      "@webapp/shared/data-access": ["libs/shared/data-access/src/index.ts"],
+      "@webapp/shared/auth": ["libs/shared/auth/src/index.ts"],
       "@webapp/common/ui/cdk/popover": [
         "libs/common/ui/cdk/popover/src/index.ts"
       ],
       "@webapp/shared/account/data-access": [
         "libs/shared/account/data-access/src/index.ts"
       ],
-      "@webapp/common/ui/nav": [
-        "libs/common/ui/nav/src/index.ts"
-      ],
+      "@webapp/common/ui/nav": ["libs/common/ui/nav/src/index.ts"],
       "@webapp/shared/account/feature": [
         "libs/shared/account/feature/src/index.ts"
-      ]
+      ],
+      "@webapp/shared/util/iterators": [
+        "libs/shared/util/iterators/src/index.ts"
+      ],
+      "@webapp/shared/util/browser": ["libs/shared/util/browser/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

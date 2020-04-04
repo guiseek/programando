@@ -1,20 +1,11 @@
 import { isPlatformBrowser } from '@angular/common';
-import {
-  AfterViewChecked,
-  Component,
-  OnInit,
-  ViewEncapsulation,
-  Inject,
-  PLATFORM_ID
-} from '@angular/core';
-import {
-  isScullyGenerated,
-  ScullyRoute,
-  ScullyRoutesService
-} from '@scullyio/ng-lib';
+import { AfterViewChecked, Component, Inject, OnInit, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { isScullyGenerated, ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
+import { HighlightService } from '@webapp/common/ui/kit';
+import { MetaService } from '@webapp/shared/util/browser';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { HighlightService, MetaService } from '@webapp/common/ui/kit';
 
 @Component({
   selector: 'blog-post',
@@ -33,27 +24,27 @@ export class PostComponent implements OnInit, AfterViewChecked {
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private srs: ScullyRoutesService,
+    private route: ActivatedRoute,
+    // private cdr: ChangeDetectorRef,
     private highlightService: HighlightService,
     private metaService: MetaService
   ) {
     this.isGenerated = isScullyGenerated();
   }
 
-  /**
-   * Highlight blog post when it's ready
-   */
   ngAfterViewChecked() {
     this.highlightService.highlightAll();
-    if (this.isGenerated) {
-      console.log('this.contentLoaded = true;')
-      this.contentLoaded = true;
+    if (this.isGenerated && !this.contentLoaded) {
+      window.setTimeout(() => this.contentLoaded = true);
     }
   }
 
   ngOnInit() {
     this.post$ = this.srs.getCurrent().pipe(
       map(post => {
-        if (post.route.includes('/posts/')) {
+        const inPosts = post.route.includes('/posts/');
+        const withSlug = this.route.snapshot.params.id;
+        if (inPosts && withSlug) {
           return post;
         }
       }),
@@ -66,25 +57,6 @@ export class PostComponent implements OnInit, AfterViewChecked {
         }
       }),
     );
-    // this.post$ = merge(
-    //   this.srs.getCurrent(),
-    //   this.router.events.pipe(filter(event => event instanceof NavigationEnd))
-    // ).pipe(
-    //   switchMap(ev => this.srs.getCurrent()),
-    //   tap(post => {
-    //     const { title, description, cover } = post;
-    //     this.seoService.generateTags({
-    //       title, description,
-    //       image: cover
-    //     });
-
-    //     if (post && post.video) {
-    //       this.addYoutubeApi();
-    //     } else {
-    //       this.showVideo = false;
-    //     }
-    //   })
-    // );
   }
 
   addYoutubeApi() {
@@ -95,9 +67,5 @@ export class PostComponent implements OnInit, AfterViewChecked {
       document.body.appendChild(tag);
       this.showVideo = true;
     }
-  }
-
-  shareTextContent() {
-    return encodeURI(location.href);
   }
 }

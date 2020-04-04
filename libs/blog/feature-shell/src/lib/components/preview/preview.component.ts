@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
+import { sortBy } from '@webapp/shared/util/iterators';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -64,6 +65,7 @@ export class PreviewComponent implements OnInit, OnChanges {
         }
         return routeList;
       }),
+      map(sortBy('updated'))
     );
   }
 }

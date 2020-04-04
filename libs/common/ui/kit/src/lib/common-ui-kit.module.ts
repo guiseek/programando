@@ -13,8 +13,6 @@ import { SvgViewerService } from './components/svg-viewer/svg-viewer.service';
 import { ToggleThemeButton } from './components/toggle-theme/toggle-theme.button';
 import { TitleDirective } from './directives/title.directive';
 import { HighlightService } from './services/highlight.service';
-import { SearchService } from './services/search.service';
-import { SeoService } from './services/seo.service';
 
 const CommonModules = [
   CommonModule,
@@ -48,8 +46,6 @@ const CommonModules = [
   ],
   providers: [
     HighlightService,
-    SeoService,
-    SearchService,
     SvgViewerService,
     { provide: SvgViewerService, useClass: SvgViewerDefaultConfig }
   ]

@@ -4,6 +4,7 @@ description: Configurando certificado SSL para desenvolvimento em ambiente local
 thumbnail: assets/images/guiseek-thumbnail.jpg
 cover: /assets/covers/angular-pwa-https-localhost-ssl-valido.webp
 video:
+canonicalUrl: 'https://programando.web.app/posts/angular-pwa-https-localhost-ssl-valido'
 keywords:
   - progressive web app
   - angular

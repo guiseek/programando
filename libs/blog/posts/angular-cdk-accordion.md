@@ -4,6 +4,7 @@ description: Uma das features escondidas do Angular CDK.
 thumbnail: assets/images/guiseek-thumbnail.webp
 cover: /assets/covers/angular-cdk-accordion.webp
 video: null
+canonicalUrl: 'https://programando.web.app/posts/angular-cdk-accordion'
 keywords:
   - angular
   - cdk

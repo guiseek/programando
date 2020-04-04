@@ -4,6 +4,7 @@ description: Atualizando um workspace monorepo para Angular versão 9
 thumbnail: assets/images/guiseek-thumbnail.webp
 cover: assets/blog/monorepo.svg
 video: G7bW2BNv6oo
+canonicalUrl: 'https://programando.web.app/posts/mono-repositorio-full-stack-com-angular-e-nest-js-parte-2-update-angular-v9'
 keywords:
   - angular
   - nestjs

@@ -4,6 +4,7 @@ description: 'NX: ferramentas de desenvolvimento para mono repositorios'
 thumbnail: assets/images/guiseek-thumbnail.jpg
 cover: null
 video: null
+canonicalUrl: 'https://programando.web.app/posts/o-que-e-monorepo-nx-ferramentas-de-desenvolvimento-para-mono-repositorios'
 keywords:
   - angular
   - monorepo

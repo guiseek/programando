@@ -14,10 +14,7 @@
               "libs/common/ui/video/tsconfig.lib.json",
               "libs/common/ui/video/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/common/ui/video/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/common/ui/video/**"]
           }
         },
         "test": {
@@ -49,10 +46,7 @@
               "libs/common/ui/kit/tsconfig.lib.json",
               "libs/common/ui/kit/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/common/ui/kit/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/common/ui/kit/**"]
           }
         },
         "test": {
@@ -119,10 +113,7 @@
               "libs/blog/feature-shell/tsconfig.lib.json",
               "libs/blog/feature-shell/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/blog/feature-shell/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/blog/feature-shell/**"]
           }
         },
         "test": {
@@ -154,10 +145,7 @@
               "libs/shared/data-access/tsconfig.lib.json",
               "libs/shared/data-access/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/data-access/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/data-access/**"]
           }
         },
         "test": {
@@ -189,10 +177,7 @@
               "libs/shared/auth/tsconfig.lib.json",
               "libs/shared/auth/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/auth/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/auth/**"]
           }
         },
         "test": {
@@ -224,10 +209,7 @@
               "libs/common/ui/cdk/popover/tsconfig.lib.json",
               "libs/common/ui/cdk/popover/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/common/ui/cdk/popover/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/common/ui/cdk/popover/**"]
           }
         },
         "test": {
@@ -288,13 +270,9 @@
               "apps/blog/src/sitemap.xml",
               "apps/blog/src/manifest.webmanifest"
             ],
-            "styles": [
-              "apps/blog/src/styles.scss"
-            ],
+            "styles": ["apps/blog/src/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared/assets/src/styles"
-              ]
+              "includePaths": ["libs/shared/assets/src/styles"]
             },
             "scripts": []
           },
@@ -355,10 +333,7 @@
               "apps/blog/tsconfig.app.json",
               "apps/blog/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/blog/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/blog/**"]
           }
         },
         "test": {
@@ -399,13 +374,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/blog-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/blog-e2e/**"
-            ]
+            "tsConfig": ["apps/blog-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/blog-e2e/**"]
           }
         }
       }
@@ -468,10 +438,7 @@
               "libs/common/ui/nav/tsconfig.lib.json",
               "libs/common/ui/nav/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/common/ui/nav/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/common/ui/nav/**"]
           }
         },
         "test": {
@@ -503,10 +470,7 @@
               "libs/shared/account/feature/tsconfig.lib.json",
               "libs/shared/account/feature/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/account/feature/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/account/feature/**"]
           }
         },
         "test": {
@@ -524,6 +488,60 @@
           "styleext": "scss"
         }
       }
+    },
+    "shared-util-iterators": {
+      "root": "libs/shared/util/iterators",
+      "sourceRoot": "libs/shared/util/iterators/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/util/iterators/tsconfig.lib.json",
+              "libs/shared/util/iterators/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/util/iterators/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/util/iterators/jest.config.js",
+            "tsConfig": "libs/shared/util/iterators/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-util-browser": {
+      "projectType": "library",
+      "root": "libs/shared/util/browser",
+      "sourceRoot": "libs/shared/util/browser/src",
+      "prefix": "webapp",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/util/browser/tsconfig.lib.json",
+              "libs/shared/util/browser/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/util/browser/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/util/browser/jest.config.js",
+            "tsConfig": "libs/shared/util/browser/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/util/browser/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
