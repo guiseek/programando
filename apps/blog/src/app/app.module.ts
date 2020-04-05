@@ -15,6 +15,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -34,6 +35,7 @@ registerLocaleData(localeBr, 'pt-BR', localeBrExtra);
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireAnalyticsModule,
+    AngularFireMessagingModule,
     BrowserAnimationsModule,
     ScullyLibModule,
     RouterModule.forRoot(

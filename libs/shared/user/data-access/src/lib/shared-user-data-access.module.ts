@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedDataAccessModule } from '@webapp/shared/data-access';
+import { UserService } from './services/user.service';
 
 @NgModule({
-  imports: [CommonModule]
+  imports: [
+    SharedDataAccessModule
+  ],
+  providers: [UserService]
 })
 export class SharedUserDataAccessModule {}

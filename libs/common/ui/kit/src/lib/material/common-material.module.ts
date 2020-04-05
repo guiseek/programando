@@ -10,6 +10,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
@@ -39,6 +40,7 @@ const MaterialModules = [
   MatDialogModule,
   MatProgressBarModule,
   MatSnackBarModule,
+  MatCheckboxModule
 ];
 
 @NgModule({

@@ -1,1 +1,10 @@
-<p>stay-tuned works!</p>
+<button
+  type="button"
+  class="message-bell"
+  mat-icon-button
+  matTooltip="Ficar sabendo de novos conteúdos"
+  [matTooltipHideDelay]="1200"
+  (click)="open.emit()"
+>
+  <mat-icon>notifications</mat-icon>
+</button>

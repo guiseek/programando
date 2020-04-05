@@ -1,1 +1,11 @@
-<p>settings works!</p>
+<h1 mat-dialog-title>
+  Conteúdos de interesse
+</h1>
+<div mat-dialog-content>
+  <user-subjects [form]="subjects"></user-subjects>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Fechar</button>
+
+  <button mat-flat-button color="primary" (click)="onSubmit(data.uid)">Salvar</button>
+</div>

@@ -6,11 +6,12 @@
  * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
  * ----------------------------------------------------------------------------------------
  */
-import { User } from 'firebase/app';
+import { AuthUser } from '@webapp/shared/data-access';
 
-export interface AuthAccount extends User {
+export interface User extends AuthUser {
   uid: string;
+  subjects?: string[];
   fcmTokens?: {
-    [t: string]: boolean;
+    [k: string]: boolean;
   }
 }

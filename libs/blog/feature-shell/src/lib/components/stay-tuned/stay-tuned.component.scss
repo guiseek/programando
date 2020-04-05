@@ -1,0 +1,10 @@
+.message-bell {
+  .mat-icon {
+    transition: color 150ms linear;
+  }
+  &:hover .mat-icon {
+    color: #dcbb5e;
+    -webkit-animation: shake-bell 1s both;
+    animation: shake-bell 1s both;
+  }
+}
