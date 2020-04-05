@@ -20,14 +20,19 @@
         </mat-card>
       </ng-container>
       <mat-card class="post-author">
-        <mat-card-content *ngIf="post.keywords">
-          <a *ngFor="let keyword of post.keywords" routerLink="/" [queryParams]="{ keyword: keyword }">
-            <span class="tag tag-sm" [class]="'tag-' + keyword">
-              #{{ keyword }}
-            </span>
+        <mat-card-content fxLayout="row" fxLayoutAlign="space-between">
+          <div *ngIf="post.keywords">
+            <a *ngFor="let keyword of post.keywords" routerLink="/" [queryParams]="{ keyword: keyword }">
+              <span class="tag tag-sm" [class]="'tag-' + keyword">
+                #{{ keyword }}
+              </span>
+            </a>
+          </div>
+          <a matTooltip="Ver no github" rel="external" target="_blank" [attr.href]="'//github.com/guiseek/programando/blob/master/libs/blog/posts/' + post.sourceFile" mat-icon-button>
+            <mat-icon svgIcon="github"></mat-icon>
           </a>
         </mat-card-content>
-        <mat-card-header role="heading" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <mat-card-header role="heading" aria-label="Autor e descrição do artigo" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img itemprop="image" mat-card-avatar [src]="post.thumbnail" [attr.alt]="post.description" />
           <mat-card-title itemprop="abstract">{{post.description}}</mat-card-title>
           <mat-card-subtitle>

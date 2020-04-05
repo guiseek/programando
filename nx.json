@@ -59,6 +59,12 @@
     },
     "shared-util-browser": {
       "tags": ["scope:shared", "type:util"]
+    },
+    "shared-user-feature": {
+      "tags": ["scope:shared", "type:feature"]
+    },
+    "shared-user-data-access": {
+      "tags": ["scope:shared", "type:data-access"]
     }
   }
 }

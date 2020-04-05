@@ -38,7 +38,11 @@
       "@webapp/shared/util/iterators": [
         "libs/shared/util/iterators/src/index.ts"
       ],
-      "@webapp/shared/util/browser": ["libs/shared/util/browser/src/index.ts"]
+      "@webapp/shared/util/browser": ["libs/shared/util/browser/src/index.ts"],
+      "@webapp/shared/user/feature": ["libs/shared/user/feature/src/index.ts"],
+      "@webapp/shared/user/data-access": [
+        "libs/shared/user/data-access/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
