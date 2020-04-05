@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'scss/themes/default.scss';
-@import 'scss/layout';
-@import 'scss/partials/blog';
-@import 'scss/partials/auth';
-@import 'scss/custom-components';
+@import "scss/themes/default.scss";
+@import "scss/layout";
+@import "scss/partials/blog";
+@import "scss/partials/auth";
+@import "scss/custom-components";
 
 html,
 body {
@@ -20,4 +20,9 @@ body {
 .auth-button-tooltip {
   background: #212121;
   color: #ffffff;
+}
+.mat-tooltip-panel .mat-tooltip {
+  background: #fcfcfc;
+  color: #212121;
+  font-size: 0.8em;
 }

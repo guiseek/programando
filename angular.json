@@ -268,6 +268,7 @@
                 "output": "./assets"
               },
               "apps/blog/src/sitemap.xml",
+              "apps/blog/src/firebase-messaging-sw.js",
               "apps/blog/src/manifest.webmanifest"
             ],
             "styles": ["apps/blog/src/styles.scss"],
@@ -538,6 +539,69 @@
             "tsConfig": "libs/shared/util/browser/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/shared/util/browser/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "shared-user-feature": {
+      "projectType": "library",
+      "root": "libs/shared/user/feature",
+      "sourceRoot": "libs/shared/user/feature/src",
+      "prefix": "user",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/user/feature/tsconfig.lib.json",
+              "libs/shared/user/feature/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/user/feature/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/user/feature/jest.config.js",
+            "tsConfig": "libs/shared/user/feature/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/user/feature/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-user-data-access": {
+      "projectType": "library",
+      "root": "libs/shared/user/data-access",
+      "sourceRoot": "libs/shared/user/data-access/src",
+      "prefix": "webapp",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/user/data-access/tsconfig.lib.json",
+              "libs/shared/user/data-access/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/user/data-access/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/user/data-access/jest.config.js",
+            "tsConfig": "libs/shared/user/data-access/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/user/data-access/src/test-setup.ts"
           }
         }
       },
