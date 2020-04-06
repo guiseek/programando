@@ -1,0 +1,16 @@
+[debug] [2020-04-06T20:13:34.740Z] ----------------------------------------------------------------------
+[debug] [2020-04-06T20:13:34.741Z] Command:       /usr/local/bin/node /usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js use --add
+[debug] [2020-04-06T20:13:34.742Z] CLI Version:   7.12.1
+[debug] [2020-04-06T20:13:34.742Z] Platform:      darwin
+[debug] [2020-04-06T20:13:34.742Z] Node Version:  v10.13.0
+[debug] [2020-04-06T20:13:34.751Z] Time:          Mon Apr 06 2020 17:13:34 GMT-0300 (GMT-03:00)
+[debug] [2020-04-06T20:13:34.752Z] ----------------------------------------------------------------------
+[debug] [2020-04-06T20:13:34.752Z] 
+[debug] [2020-04-06T20:13:34.770Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-06T20:13:34.770Z] > authorizing via signed-in user
+[debug] [2020-04-06T20:13:34.773Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-06T20:13:34.773Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-06T20:13:35.024Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-06T20:13:35.040Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=1000  
+ 

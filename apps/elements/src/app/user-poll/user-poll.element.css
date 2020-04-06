@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+button {
+  border: 0;
+  background: transparent;
+  transition: transform 150ms ease-in-out;
+}
+button svg {
+  width: 100%;
+}
+button:hover {
+  transform: scale(1.6);
+}

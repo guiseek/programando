@@ -1,0 +1,105 @@
+:host {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.media:first-child {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+.media {
+  position: relative;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+.header {
+  padding: 1rem;
+}
+.headline {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+}
+.subtitle {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.0071428571em;
+  text-decoration: inherit;
+  text-transform: inherit;
+}
+.body {
+  line-height: 1.25rem;
+  font-weight: 400;
+  text-decoration: inherit;
+  text-transform: inherit;
+  font-size: 0.875rem;
+  letter-spacing: 0.0178571429em;
+}
+.actions:not(::empty) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 52px;
+  padding: 8px;
+}
+.actions .buttons {
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.actions .buttons button {
+  color: black;
+  height: 36px;
+  font-size: 0.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  letter-spacing: 0.0892857143em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 8px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 64px;
+  border: none;
+  outline: none;
+  line-height: inherit;
+  user-select: none;
+  overflow: visible;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+.actions .buttons button:last-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.actions .icons {
+  color: rgba(0, 0, 0, 0.6);
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.actions .buttons + .actions .icons {
+  margin-left: 16px;
+  margin-right: 0;
+}
+

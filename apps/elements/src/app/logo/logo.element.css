@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  position: relative;
+}
+svg {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  transition: 300ms transform ease-in-out, 300ms opacity ease-in-out;
+}
+:host(:hover) .fire {
+  transform: translateX(-25%) rotate(-25deg);
+}
+:host(:hover) .nest {
+  transform: translateX(25%) rotate(25deg);
+}
+:host(:hover) .uig {
+  transform: scale(0.6);
+  opacity: 0.4;
+}
