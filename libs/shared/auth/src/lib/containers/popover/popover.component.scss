@@ -1,8 +1,37 @@
 :host {
   display: block;
   overflow: hidden;
+  max-width: 260px;
+  .mat-card-title,
+  .mat-card-subtitle {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 180px;
+  }
   .mat-card {
     background: #212121;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14),
+      0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  }
+  .mat-list {
+    margin-left: -16px;
+    margin-right: -16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    &.mat-list-base {
+      padding-top: 0;
+    }
+    .mat-list-item {
+      background: rgba(255, 255, 255, 0.02);
+      &:hover {
+        background: rgba(255, 255, 255, 0.04);
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+    }
   }
   .mat-card-actions {
     display: flex;
@@ -14,3 +43,20 @@
   //   0 2px 2px 0 rgba(0, 0, 0, 0.14),
   //     0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
+
+// :host {
+//   display: block;
+//   overflow: hidden;
+//   .mat-card {
+//     background: #212121;
+//   }
+//   .mat-card-actions {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+//   // border-bottom-left-radius: 8px;
+//   // border-bottom-right-radius: 8px;
+//   // box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+//   //   0 2px 2px 0 rgba(0, 0, 0, 0.14),
+//   //     0 1px 5px 0 rgba(0, 0, 0, 0.12);
+// }

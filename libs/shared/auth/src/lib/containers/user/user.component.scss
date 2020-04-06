@@ -5,3 +5,15 @@
 //     padding: 0 4px;
 //   }
 // }
+:host button {
+  // position: relative;
+  // padding-left: 36px;
+  img.avatar {
+    display: inline-flex;
+    width: 32px;
+    border-radius: 50%;
+    // top: 0;
+    // position: absolute;
+    // height: auto;
+  }
+}

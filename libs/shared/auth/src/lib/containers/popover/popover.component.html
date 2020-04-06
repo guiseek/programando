@@ -1,11 +1,19 @@
 <mat-card>
-  <mat-card-header>
-    <img mat-card-avatar [src]="data.photoURL" [attr.alt]="data.displayName" />
+  <!-- <mat-card-header> -->
+    <!-- <img mat-card-avatar [src]="data.photoURL" [attr.alt]="data.displayName" /> -->
     <mat-card-title>{{ data.displayName }}</mat-card-title>
     <mat-card-subtitle>{{ data.email }}</mat-card-subtitle>
-  </mat-card-header>
+  <!-- </mat-card-header> -->
+  <mat-action-list>
+    <!-- <button mat-list-item (click)="openSettings(data)">
+      Preferências
+    </button> -->
+    <a mat-list-item [routerLink]="['/conta']" (click)="popoverRef.close()" color="accent">
+      Conta
+    </a>
+  </mat-action-list>
   <mat-card-actions>
-    <a [routerLink]="['/conta']" (click)="popoverRef.close()" color="accent" mat-stroked-button>Conta</a>
+    <!-- <a [routerLink]="['/conta']" (click)="popoverRef.close()" color="accent" mat-stroked-button>Conta</a> -->
     <button mat-button (click)="signOut()">Sair do App</button>
   </mat-card-actions>
 </mat-card>
