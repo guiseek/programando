@@ -35,7 +35,7 @@
     "scully": "scully",
     "scully:serve": "npx scully serve",
     "scully:watch": "npx scully watch",
-    "build:blog": "ng build --project blog --prod",
+    "build:blog": "ng build --project blog --prod --stats-json",
     "ci:blog": "npm run build:blog && npm run scully",
     "deploy": "firebase deploy --only hosting:blog",
     "open": "http-server -c-1 dist/static/apps/blog/ -o",
