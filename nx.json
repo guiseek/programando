@@ -65,6 +65,13 @@
     },
     "shared-user-data-access": {
       "tags": ["scope:shared", "type:data-access"]
+    },
+    "elements": {
+      "tags": ["type:app"]
+    },
+    "elements-e2e": {
+      "tags": [],
+      "implicitDependencies": ["elements"]
     }
   }
 }
