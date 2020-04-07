@@ -42,7 +42,8 @@
       "@webapp/shared/user/feature": ["libs/shared/user/feature/src/index.ts"],
       "@webapp/shared/user/data-access": [
         "libs/shared/user/data-access/src/index.ts"
-      ]
+      ],
+      "@webapp/shared/util/testing": ["libs/shared/util/testing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

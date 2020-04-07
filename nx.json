@@ -72,6 +72,9 @@
     "elements-e2e": {
       "tags": [],
       "implicitDependencies": ["elements"]
+    },
+    "shared-util-testing": {
+      "tags": ["scope:shared", "type:test"]
     }
   }
 }
