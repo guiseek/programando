@@ -72,6 +72,13 @@
     "elements-e2e": {
       "tags": [],
       "implicitDependencies": ["elements"]
+    },
+    "custom": {
+      "tags": ["type:app"]
+    },
+    "custom-e2e": {
+      "tags": [],
+      "implicitDependencies": ["custom"]
     }
   }
 }

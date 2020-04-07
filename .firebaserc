@@ -4,6 +4,9 @@
       "hosting": {
         "blog": [
           "programando"
+        ],
+        "custom": [
+          "custom-elements"
         ]
       }
     }

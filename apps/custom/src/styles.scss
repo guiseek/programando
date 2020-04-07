@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #212121;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+
+  --font-body: 'Google Sans';
+  --font-code: Roboto Mono, monospace;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

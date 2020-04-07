@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-
 export interface NavItem {
   title: string;
   route: string;
@@ -9,7 +8,6 @@ export interface NavItem {
   icon?: string;
   externalUrl?: boolean;
 }
-
 @Component({
   selector: 'web-navbar',
   templateUrl: './navbar.element.html',

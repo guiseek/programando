@@ -1,0 +1,14 @@
+<web-navbar title="TTitle">
+
+  <ul slot="nav" class="navbar-nav">
+    <ng-container *ngFor="let item of navigation">
+      <li class="nav-item">
+        <a [routerLink]="item.route" [queryParams]="item.queryParams" class="nav-link">
+          <span class="link-text">{{item.title}}</span>
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+
+
+</web-navbar>

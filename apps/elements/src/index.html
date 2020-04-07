@@ -8,6 +8,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
     rel="stylesheet">
 
+  <script>
+    const navigation = [
+      {
+        icon: 'angular',
+        title: 'Angular',
+        route: '/',
+        queryParams: { keyword: 'angular' }
+      },
+      {
+        icon: 'nx',
+        title: 'NX',
+        route: '/',
+        queryParams: { keyword: 'nx' }
+      },
+      {
+        icon: 'firebase',
+        title: 'Firebase',
+        route: '/',
+        queryParams: { keyword: 'firebase' }
+      },
+      {
+        icon: 'nestjs',
+        title: 'NestJS',
+        route: '/',
+        queryParams: { keyword: 'nestjs' }
+      }
+    ];
+  </script>
+  </script>
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -32,7 +61,17 @@
 </head>
 
 <body>
-  <web-navbar></web-navbar>
+  <web-navbar title="oi">
+    <ul slot="nav" class="navbar-nav">
+      <ng-container *ngFor="let item of navigation">
+        <li class="nav-item">
+          <a [routerLink]="item.route" [queryParams]="item.queryParams" class="nav-link">
+            <span class="link-text">{{item.title}}</span>
+          </a>
+        </li>
+    </ul>
+    </ng-container>
+  </web-navbar>
 
   <div class="container">
     <web-post-card>
