@@ -4,12 +4,6 @@
       "target": "blog",
       "public": "dist/static/apps/blog",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ],
       "headers": [
         {
           "source": "**/*.@(jpg|webp|jpeg|gif|png|svg)",
