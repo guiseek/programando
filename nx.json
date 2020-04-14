@@ -59,6 +59,22 @@
     },
     "shared-util-browser": {
       "tags": ["scope:shared", "type:util"]
+    },
+    "shared-user-feature": {
+      "tags": ["scope:shared", "type:feature"]
+    },
+    "shared-user-data-access": {
+      "tags": ["scope:shared", "type:data-access"]
+    },
+    "elements": {
+      "tags": ["type:app"]
+    },
+    "elements-e2e": {
+      "tags": [],
+      "implicitDependencies": ["elements"]
+    },
+    "shared-util-testing": {
+      "tags": ["scope:shared", "type:test"]
     }
   }
 }

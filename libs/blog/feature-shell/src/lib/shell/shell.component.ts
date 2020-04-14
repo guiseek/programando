@@ -1,20 +1,19 @@
-/*
- * ----------------------------------------------------------------------------------------
- * "THE BEER-WARE LICENSE" (Revision 42):
- * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
- * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
- * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
- * ----------------------------------------------------------------------------------------
- */
-import { Component } from '@angular/core';
-import { NavItem } from '@webapp/shared/data-access';
+import { Component, OnInit } from '@angular/core';
+// import { MatDialog } from '@angular/material/dialog';
+import {
+  // AuthService,
+  // MessagingService,
+  NavItem
+} from '@webapp/shared/data-access';
+// import { SettingsDialog } from '@webapp/shared/user/feature';
+// import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'blog-shell',
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss']
 })
-export class ShellComponent {
+export class ShellComponent implements OnInit {
   navigation: NavItem[] = [
     {
       icon: 'angular',
@@ -41,4 +40,24 @@ export class ShellComponent {
       queryParams: { keyword: 'nestjs' }
     }
   ];
+
+  constructor(
+    // public msg: MessagingService,
+    // public auth: AuthService,
+    // private dialog: MatDialog
+  ) { }
+
+  ngOnInit() {
+    // this.auth.user$.pipe(take(1))
+    //   .subscribe((user) => {
+    //     console.log(user);
+
+    //     this.msg.getPermission(user);
+    //     // this.msg.monitorRefresh(user);
+    //     this.msg.receiveMessages();
+    //   })
+  }
+  openSettings(user) {
+    // this.dialog.open(SettingsDialog, { data: user });
+  }
 }

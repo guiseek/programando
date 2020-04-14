@@ -8,6 +8,15 @@
     </a>
   </ui-toolbar-logo>
 
+  <!-- <ui-toolbar-button *ngIf="auth.user$ | async as user">
+    <blog-stay-tuned (open)="openSettings(user)"></blog-stay-tuned>
+  </ui-toolbar-button>
+
+  <ui-toolbar-icon *ngIf="msg.currentMessage | async as message">
+    <mat-icon>{{message?.notification.icon}}</mat-icon>
+    <span>{{ message.notification.title }}</span>
+  </ui-toolbar-icon> -->
+
   <ui-toolbar-menu>
     <auth-user></auth-user>
   </ui-toolbar-menu>

@@ -8,11 +8,10 @@
  */
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app';
+import { auth, User } from 'firebase/app';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { firebaseError } from './messages/firebase-errors';
-import { AuthAccount } from './models/auth-account.model';
 import { AuthUser } from './models/auth-user.model';
 
 export type authProviders = 'google' | 'github';
@@ -35,13 +34,13 @@ const identifyProvider = (providerID: string) => {
   providedIn: 'root'
 })
 export class AuthService {
-  user$: Observable<AuthAccount>;
+  user$: Observable<User>;
 
   constructor(
     private fireAuth: AngularFireAuth
   ) {
     this.user$ = this.fireAuth.authState.pipe(
-      map(user => user ? user : null)
+      map(user => !!user ? user : null)
     );
   }
 

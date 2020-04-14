@@ -20,18 +20,15 @@
   </ul>
 
   <ul class="navbar-nav">
+
     <ng-container *ngFor="let item of items">
       <li class="nav-item">
         <a [routerLink]="item.route" [queryParams]="item.queryParams" class="nav-link">
-          <!-- <mat-icon ></mat-icon> -->
           <ui-icon class="svg-inline--fa" [svgIcon]="item.icon"></ui-icon>
-          <!-- <ui-svg-viewer [src]="'assets/icons/' + item.icon + '.svg'"></ui-svg-viewer> -->
           <span class="link-text">{{item.title}}</span>
         </a>
       </li>
 
     </ng-container>
   </ul>
-  <!-- <ng-content></ng-content> -->
-
 </nav>

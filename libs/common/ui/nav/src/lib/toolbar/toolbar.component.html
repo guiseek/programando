@@ -1,7 +1,5 @@
 <mat-toolbar role="banner">
 
-  <ng-content select="ui-toolbar-button"></ng-content>
-
   <ng-content select="ui-toolbar-logo"></ng-content>
 
   <div fxFlex>
@@ -9,6 +7,8 @@
   </div>
 
   <div fxFlex="30%" fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="end center">
+
+    <ng-content select="ui-toolbar-button"></ng-content>
 
     <ng-content select="ui-toolbar-icon"></ng-content>
 

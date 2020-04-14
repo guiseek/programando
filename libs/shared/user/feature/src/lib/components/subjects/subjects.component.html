@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <mat-selection-list formControlName="subjects" *ngIf="(subjects$ | async) as subjects">
+
+    <h3 mat-subheader>Tópicos</h3>
+
+    <mat-list-option *ngFor="let sub of subjects" [value]="sub.name" color="primary">
+      <img matListAvatar [src]="'/assets/logos/' + sub.icon">
+      {{sub.title}}
+    </mat-list-option>
+
+  </mat-selection-list>
+</form>

@@ -6,7 +6,7 @@
  * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
  * ----------------------------------------------------------------------------------------
  */
-import { ObserversModule } from '@angular/cdk/observers';
+// import { ObserversModule } from '@angular/cdk/observers';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { YouTubePlayerModule } from '@angular/youtube-player';
@@ -15,7 +15,9 @@ import { CommonUiCdkPopoverModule } from '@webapp/common/ui/cdk/popover';
 import { CommonUiKitModule, CommonUiMaterialModule } from '@webapp/common/ui/kit';
 import { CommonUiNavModule } from '@webapp/common/ui/nav';
 import { SharedAuthModule } from '@webapp/shared/auth';
+import { SharedUserFeatureModule } from '@webapp/shared/user/feature';
 import { PreviewComponent } from './components/preview/preview.component';
+import { StayTunedComponent } from './components/stay-tuned/stay-tuned.component';
 import { OverviewComponent } from './overview/overview.component';
 import { PostComponent } from './post/post.component';
 import { ShellComponent } from './shell/shell.component';
@@ -29,8 +31,9 @@ import { ShellComponent } from './shell/shell.component';
     CommonUiNavModule,
     CommonUiCdkPopoverModule,
     SharedAuthModule,
+    SharedUserFeatureModule,
     YouTubePlayerModule,
-    ObserversModule,
+    // ObserversModule,
     RouterModule.forChild([
       {
         path: '',
@@ -46,7 +49,8 @@ import { ShellComponent } from './shell/shell.component';
     ShellComponent,
     OverviewComponent,
     PostComponent,
-    PreviewComponent
+    PreviewComponent,
+    StayTunedComponent
   ]
 })
 export class BlogFeatureShellModule {}
