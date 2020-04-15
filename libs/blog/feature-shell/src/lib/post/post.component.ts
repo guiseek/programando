@@ -14,6 +14,7 @@ import { HighlightService } from '@webapp/common/ui/kit';
 import { MetaService } from '@webapp/shared/util/browser';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
+import { MessagingService } from '@webapp/shared/data-access';
 
 @Component({
   selector: 'blog-post',

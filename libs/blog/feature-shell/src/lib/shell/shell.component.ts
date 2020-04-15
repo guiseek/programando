@@ -1,10 +1,14 @@
+import { SettingsDialog } from './../../../../../shared/user/feature/src/lib/dialogs/settings/settings.dialog';
+import { AuthService } from './../../../../../shared/data-access/src/lib/auth.service';
 import { Component, OnInit } from '@angular/core';
 // import { MatDialog } from '@angular/material/dialog';
 import {
   // AuthService,
   // MessagingService,
-  NavItem
+  NavItem, MessagingService
 } from '@webapp/shared/data-access';
+import { take } from 'rxjs/operators';
+import { MatDialog } from '@angular/material/dialog';
 // import { SettingsDialog } from '@webapp/shared/user/feature';
 // import { take } from 'rxjs/operators';
 
@@ -42,22 +46,22 @@ export class ShellComponent implements OnInit {
   ];
 
   constructor(
-    // public msg: MessagingService,
-    // public auth: AuthService,
-    // private dialog: MatDialog
+    public msg: MessagingService,
+    public auth: AuthService,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit() {
-    // this.auth.user$.pipe(take(1))
-    //   .subscribe((user) => {
-    //     console.log(user);
+    this.auth.user$.pipe(take(1))
+      .subscribe((user) => {
+        console.log(user);
 
-    //     this.msg.getPermission(user);
-    //     // this.msg.monitorRefresh(user);
-    //     this.msg.receiveMessages();
-    //   })
+        this.msg.getPermission(user);
+        // this.msg.monitorRefresh(user);
+        this.msg.receiveMessages();
+      })
   }
   openSettings(user) {
-    // this.dialog.open(SettingsDialog, { data: user });
+    this.dialog.open(SettingsDialog, { data: user });
   }
 }

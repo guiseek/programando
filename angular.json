@@ -779,6 +779,45 @@
           }
         }
       }
+    },
+    "scully-plugin-xml-route-map": {
+      "root": "libs/scully/plugin/xml-route-map",
+      "sourceRoot": "libs/scully/plugin/xml-route-map/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/scully/plugin/xml-route-map/tsconfig.lib.json",
+              "libs/scully/plugin/xml-route-map/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/scully/plugin/xml-route-map/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/scully/plugin/xml-route-map/jest.config.js",
+            "tsConfig": "libs/scully/plugin/xml-route-map/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/libs/scully/plugin/xml-route-map",
+            "tsConfig": "libs/scully/plugin/xml-route-map/tsconfig.lib.json",
+            "packageJson": "libs/scully/plugin/xml-route-map/package.json",
+            "main": "libs/scully/plugin/xml-route-map/src/index.ts",
+            "assets": ["libs/scully/plugin/xml-route-map/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": {
