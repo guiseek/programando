@@ -37,6 +37,8 @@ code, pre,
 code[class*="language-"],
 pre[class*="language-"] {
   font-family: var(--font-code);
+  background: #2d2d2d;
+  border-radius: 6px;
 }
 
 .dark {

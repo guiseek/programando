@@ -1,8 +1,8 @@
 /* include CSS for prism toolbar */
 @import '~prismjs/plugins/toolbar/prism-toolbar.css';
 /* check node_modules/prismjs/themes/ for the available themes */
-// @import '~prismjs/themes/prism-tomorrow.css';
-@import 'code/prism-material-dark.scss';
+@import '~prismjs/themes/prism-tomorrow.css';
+// @import 'code/prism-material-dark.scss';
 
 :root {
   scroll-behavior: smooth;

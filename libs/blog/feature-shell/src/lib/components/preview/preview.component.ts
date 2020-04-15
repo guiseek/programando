@@ -36,8 +36,6 @@ export class PreviewComponent implements OnInit, OnChanges {
   }
 
   private loadPosts() {
-    console.log('load');
-
     this.blogPostData$ = this.scully.available$.pipe(
       map(routeList => {
         return routeList

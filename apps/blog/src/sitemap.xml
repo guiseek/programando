@@ -1,41 +1,133 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://programando.web.app/</loc>
-    <lastmod>2020-03-01T15:26:22+00:00</lastmod>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
+    <loc>https://programando.web.app/?keyword=angular</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=nx</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=firebase</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=nestjs</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/posts/angular-firebase-utils/</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=typescript</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=javascript</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/posts/o-que-e-monorepo-nx-ferramentas-de-desenvolvimento-para-mono-repositorios/</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=monorepo</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=workspace</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=full-stack</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://programando.web.app/posts/angular-cdk-accordion/</loc>
-    <lastmod>2020-03-01T15:26:22+00:00</lastmod>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=cdk</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=material</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://programando.web.app/posts/angular-pwa-https-localhost-ssl-valido/</loc>
-    <lastmod>2020-03-01T15:26:22+00:00</lastmod>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=progressive%20web%20app</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=pwa</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=ssl</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://programando.web.app/?keyword=https</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://programando.web.app/posts/mono-repositorio-full-stack-com-angular-e-nest-js-parte-2-update-angular-v9/</loc>
-    <lastmod>2020-03-01T15:26:22+00:00</lastmod>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://programando.web.app/posts/mono-repositorio-full-stack-com-angular-e-nest-js/</loc>
-    <lastmod>2020-03-01T15:26:22+00:00</lastmod>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://programando.web.app/posts/ola-mundo/</loc>
-    <lastmod>2020-03-01T15:26:22+00:00</lastmod>
+    <loc>https://programando.web.app/?keyword=nest</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://programando.web.app/posts/pwa-em-i-phone-i-pad-e-ipod/</loc>
-    <lastmod>2020-03-01T15:26:22+00:00</lastmod>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
     <priority>0.80</priority>
   </url>
-
-
+  <url>
+    <loc>https://programando.web.app/?keyword=apple</loc>
+    <lastmod>2020-04-15T03:56:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>

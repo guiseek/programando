@@ -13,6 +13,8 @@
   &:hover {
     background-color: var(--bg-primary);
   }
+  display: flex;
+  flex-flow: column;
 }
 
 .navbar-nav {
@@ -111,6 +113,25 @@
 .navbar:hover .logo svg {
   transform: rotate(-180deg);
   filter: grayscale(0%) opacity(1);
+}
+
+#ciBadge {
+  margin-top: auto;
+  margin-bottom: 10px;
+
+  img {
+    margin-left: -38px;
+    // width: calc(100% - 30px);
+    transition: all var(--transition-speed) ease-in-out;
+  }
+}
+
+.navbar:hover #ciBadge {
+  img {
+    margin-left: 10px;
+    // width: 100%;
+    margin: 10px 10px 0;
+  }
 }
 
 /* Small screens */

@@ -75,6 +75,9 @@
     },
     "shared-util-testing": {
       "tags": ["scope:shared", "type:test"]
+    },
+    "scully-plugin-xml-route-map": {
+      "tags": ["scope:scully", "type:plugin"]
     }
   }
 }

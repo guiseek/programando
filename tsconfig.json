@@ -43,7 +43,10 @@
       "@webapp/shared/user/data-access": [
         "libs/shared/user/data-access/src/index.ts"
       ],
-      "@webapp/shared/util/testing": ["libs/shared/util/testing/src/index.ts"]
+      "@webapp/shared/util/testing": ["libs/shared/util/testing/src/index.ts"],
+      "@webapp/scully/plugin/xml-route-map": [
+        "libs/scully/plugin/xml-route-map/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
