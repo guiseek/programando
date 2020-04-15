@@ -34,7 +34,7 @@
     "scully:watch": "npx scully watch",
     "build:blog": "ng build --project blog --prod",
     "blog": "ng build blog --buildOptimizer --extractCss --extractLicenses --no-namedChunks --ngswConfigPath=apps/blog/ngsw-config.json --optimization --outputHashing=all --serviceWorker --no-sourceMap --statsJson --no-vendorChunk",
-    "ci:blog": "npm run build:blog && npm run scully",
+    "ci:blog": "ng build blog --configuration=staging && npm run scully",
     "deploy": "firebase deploy --only hosting:blog",
     "open": "http-server -c-1 dist/static/apps/blog/ -o",
     "elms": "http-server -c-1 dist/apps/elements/ -p 7070 -o",

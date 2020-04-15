@@ -23,13 +23,6 @@ const getProvider = (provider: authProviders | string) => {
   }
 }
 
-const identifyProvider = (providerID: string) => {
-  switch (providerID) {
-    case 'google.com': return new auth.GoogleAuthProvider();
-    case 'github.com': return new auth.GithubAuthProvider();
-  }
-}
-
 @Injectable({
   providedIn: 'root'
 })
