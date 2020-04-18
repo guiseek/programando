@@ -7,7 +7,7 @@
  * ----------------------------------------------------------------------------------------
  */
 // import { ObserversModule } from '@angular/cdk/observers';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { ScullyLibModule } from '@scullyio/ng-lib';
@@ -45,6 +45,7 @@ import { ShellComponent } from './shell/shell.component';
       }
     ])
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     ShellComponent,
     OverviewComponent,
