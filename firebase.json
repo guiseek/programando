@@ -3,7 +3,11 @@
     {
       "target": "blog",
       "public": "dist/static/apps/blog",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
       "headers": [
         {
           "source": "**/*.@(jpg|webp|jpeg|gif|png|svg)",
@@ -29,5 +33,25 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "predeploy": [
+      "yarn lint cloud-functions",
+      "yarn build cloud-functions --prod"
+    ],
+    "source": "/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "apps/blog",
+      "apps/elements",
+      "**/node_modules/**",
+      "libs",
+      "docs"
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
 }

@@ -21,7 +21,7 @@ export class MessagingService {
     this.afm.requestPermission
       .pipe(mergeMapTo(this.afm.tokenChanges))
       .subscribe((token) => {
-        console.log('permissão ok: ', user.displayName, token);
+        console.log('permissão ok: ', !!user && user.displayName, token);
         this.saveToken(user, token);
       });
     // this.messaging.requestPermission()

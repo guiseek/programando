@@ -9,6 +9,9 @@
     "build": "ng build",
     "build:watch": "ng build --watch",
     "build:elements": "ng build --prod --project elements --output-hashing none && node tools/builders/build-elements.js",
+    "start": "firebase emulators:start",
+    "only-fun": "firebase deploy --only functions",
+    "firev": "firebase --version",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
@@ -28,7 +31,7 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "serve:videos": "http-server ~/guiseek/seek-tech/angular",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
+    "post:install": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "scully": "scully",
     "scully:serve": "npx scully serve",
     "scully:watch": "npx scully watch",
@@ -42,6 +45,10 @@
     "feat": "git flow feature start",
     "write": "git checkout -b",
     "post": "ng g @scullyio/init:post --target=libs/blog/posts --meta-data-file='libs/blog/feature-shell/blog-post-template.yaml' --name"
+  },
+  "main": "dist/apps/cloud/functions/main.js",
+  "engines": {
+    "node": "10"
   },
   "private": true,
   "dependencies": {
@@ -68,7 +75,9 @@
     "@scullyio/scully": "latest",
     "core-js": "^2.5.4",
     "express": "^4.15.2",
-    "firebase": ">= 5.5.7 <8",
+    "firebase": "^7.14.1",
+    "firebase-admin": "^8.10.0",
+    "firebase-functions": "^3.6.0",
     "prismjs": "^1.19.0",
     "rxjs": "~6.5.0",
     "zone.js": "^0.10.2"

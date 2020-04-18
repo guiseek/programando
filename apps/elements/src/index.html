@@ -14,7 +14,7 @@
       --text-secondary: #ececec;
       --bg-primary: #212121;
       --bg-secondary: #141418;
-      --transition-speed: 600ms;
+      --transition-speed: 400ms;
 
       --font-body: 'Google Sans';
       --font-code: Roboto Mono, monospace;
@@ -27,7 +27,7 @@
       --nav-size: 60px;
       --border: 1px solid #474a4d;
       --border-radius: 8px;
-      --speed: 150ms;
+      --speed: 250ms;
     }
 
     body {
@@ -161,9 +161,13 @@
 
   <!-- <web-dropdown></web-dropdown> -->
 
-  <nav class="container toolbar">
+  <web-toolbar>
+    <web-logo slot="center" size="54px"></web-logo>
+  </web-toolbar>
+
+  <!-- <nav class="container toolbar">
     <web-logo size="54px"></web-logo>
-  </nav>
+  </nav> -->
 
   <main>
     <web-logo size="256px"></web-logo>

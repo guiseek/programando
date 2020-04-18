@@ -6,10 +6,10 @@
  * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
  * ----------------------------------------------------------------------------------------
  */
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { fromEvent, Observable } from 'rxjs';
-import { debounceTime, distinctUntilChanged, filter, pluck } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { pluck } from 'rxjs/operators';
 
 @Component({
   selector: 'blog-overview',
@@ -20,7 +20,7 @@ import { debounceTime, distinctUntilChanged, filter, pluck } from 'rxjs/operator
 export class OverviewComponent implements OnInit, AfterViewInit {
   keyword$: Observable<string>;
   searchString: string;
-  @ViewChild('input') input: ElementRef;
+  // @ViewChild('input') input: ElementRef;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -29,10 +29,10 @@ export class OverviewComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    fromEvent(this.input.nativeElement, 'keyup')
-      .pipe(filter(Boolean), debounceTime(300), distinctUntilChanged())
-      .subscribe((text: string) => {
-        this.searchString = this.input.nativeElement.value;
-      });
+    // fromEvent(this.input.nativeElement, 'keyup')
+    //   .pipe(filter(Boolean), debounceTime(300), distinctUntilChanged())
+    //   .subscribe((text: string) => {
+    //     this.searchString = this.input.nativeElement.value;
+    //   });
   }
 }
