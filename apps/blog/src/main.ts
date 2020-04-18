@@ -14,7 +14,7 @@ import { AppModule } from './app/app.module';
 if (environment.production) {
   enableProdMode();
 } else {
-  import('../../../dist/static/apps/elements/web.js');
+  // import('../../../dist/static/apps/elements/web.js')
 }
 
 platformBrowserDynamic()

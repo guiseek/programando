@@ -48,16 +48,16 @@ registerLocaleData(localeBr, 'pt-BR', localeBrExtra);
             ),
           data: { preload: true }
         },
-        {
-          path: 'conta',
-          loadChildren: () =>
-            import('@webapp/shared/account/feature').then(
-              module => module.SharedAccountFeatureModule
-            )
-        }
+        // {
+        //   path: 'conta',
+        //   loadChildren: () =>
+        //     import('@webapp/shared/account/feature').then(
+        //       module => module.SharedAccountFeatureModule
+        //     )
+        // }
       ],
       {
-        initialNavigation: 'enabled'
+        // initialNavigation: ''
         // onSameUrlNavigation: 'reload'
       }
     ),

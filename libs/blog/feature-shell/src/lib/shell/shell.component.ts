@@ -51,6 +51,10 @@ export class ShellComponent implements OnInit {
     //     }
     //   })
   }
+  onOnLoad(t) {
+    console.log('load', t);
+
+  }
   // openSettings(user) {
   //   // this.dialog.open(SettingsDialog, { data: user });
   // }
