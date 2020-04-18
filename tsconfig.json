@@ -46,6 +46,12 @@
       "@webapp/shared/util/testing": ["libs/shared/util/testing/src/index.ts"],
       "@webapp/scully/plugin/xml-route-map": [
         "libs/scully/plugin/xml-route-map/src/index.ts"
+      ],
+      "@webapp/scully/plugin/remove-angular": [
+        "libs/scully/plugin/remove-angular/src/index.ts"
+      ],
+      "@webapp/scully/plugin/add-scripts": [
+        "libs/scully/plugin/add-scripts/src/index.ts"
       ]
     }
   },

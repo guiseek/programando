@@ -12,141 +12,81 @@
   },
   "projects": {
     "common-ui-video": {
-      "tags": [
-        "scope:common",
-        "type:ui"
-      ]
+      "tags": ["scope:common", "type:ui"]
     },
     "common-ui-kit": {
-      "tags": [
-        "scope:shared",
-        "type:ui"
-      ]
+      "tags": ["scope:shared", "type:ui"]
     },
     "common-ui-cdk-accordion": {
-      "tags": [
-        "scope:common",
-        "type:ui"
-      ]
+      "tags": ["scope:common", "type:ui"]
     },
     "blog-feature-shell": {
-      "tags": [
-        "scope:blog",
-        "type:feature"
-      ]
+      "tags": ["scope:blog", "type:feature"]
     },
     "shared-data-access": {
-      "tags": [
-        "scope:shared",
-        "type:data-access"
-      ]
+      "tags": ["scope:shared", "type:data-access"]
     },
     "shared-auth": {
-      "tags": [
-        "scope:shared",
-        "type:feature"
-      ]
+      "tags": ["scope:shared", "type:feature"]
     },
     "common-ui-cdk-popover": {
-      "tags": [
-        "scope:common",
-        "type:ui"
-      ]
+      "tags": ["scope:common", "type:ui"]
     },
     "blog": {
-      "tags": [
-        "scope:blog",
-        "type:app"
-      ]
+      "tags": ["scope:blog", "type:app"]
     },
     "blog-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "blog"
-      ]
+      "implicitDependencies": ["blog"]
     },
     "shared-assets": {
-      "tags": [
-        "type:assets",
-        "scope:shared"
-      ]
+      "tags": ["type:assets", "scope:shared"]
     },
     "blog-posts": {
-      "tags": [
-        "type:posts",
-        "scope:blog"
-      ]
+      "tags": ["type:posts", "scope:blog"]
     },
     "shared-account-data-access": {
-      "tags": [
-        "scope:shared",
-        "type:data-access"
-      ]
+      "tags": ["scope:shared", "type:data-access"]
     },
     "common-ui-nav": {
-      "tags": [
-        "scope:common",
-        "type:ui"
-      ]
+      "tags": ["scope:common", "type:ui"]
     },
     "shared-account-feature": {
-      "tags": [
-        "scope:shared",
-        "type:feature"
-      ]
+      "tags": ["scope:shared", "type:feature"]
     },
     "shared-util-iterators": {
-      "tags": [
-        "scope:shared",
-        "type:util"
-      ]
+      "tags": ["scope:shared", "type:util"]
     },
     "shared-util-browser": {
-      "tags": [
-        "scope:shared",
-        "type:util"
-      ]
+      "tags": ["scope:shared", "type:util"]
     },
     "shared-user-feature": {
-      "tags": [
-        "scope:shared",
-        "type:feature"
-      ]
+      "tags": ["scope:shared", "type:feature"]
     },
     "shared-user-data-access": {
-      "tags": [
-        "scope:shared",
-        "type:data-access"
-      ]
+      "tags": ["scope:shared", "type:data-access"]
     },
     "elements": {
-      "tags": [
-        "type:app"
-      ]
+      "tags": ["type:app"]
     },
     "elements-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "elements"
-      ]
+      "implicitDependencies": ["elements"]
     },
     "shared-util-testing": {
-      "tags": [
-        "scope:shared",
-        "type:test"
-      ]
+      "tags": ["scope:shared", "type:test"]
     },
     "scully-plugin-xml-route-map": {
-      "tags": [
-        "scope:scully",
-        "type:plugin"
-      ]
+      "tags": ["scope:scully", "type:plugin"]
     },
     "cloud-functions": {
-      "tags": [
-        "scope:cloud",
-        "type:app"
-      ]
+      "tags": ["scope:cloud", "type:app"]
+    },
+    "scully-plugin-remove-angular": {
+      "tags": ["scope:scully", "type:plugin"]
+    },
+    "scully-plugin-add-scripts": {
+      "tags": ["scope:scully", "type:plugin"]
     }
   }
 }
