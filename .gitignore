@@ -40,3 +40,4 @@ Thumbs.db
 .firebase
 
 environments/environment.prod.ts
+environments/secrets/

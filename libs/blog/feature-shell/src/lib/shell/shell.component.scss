@@ -1,7 +1,9 @@
 :host {
   display: block;
   height: 100%;
-
+  web-toolbar a:last-child {
+    margin-right: 24px;
+  }
   // .mat-card {
   //   max-width: 600px;
   // }
@@ -36,4 +38,11 @@
     }
   }
   // background-color: var(--bg-primary);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  min-height: 36px;
+  padding: 6px;
 }

@@ -1,0 +1,122 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{userId} {
+      allow read: if true;
+      allow create: if authenticated();
+      allow update, delete: if itsMe(userId);
+    }
+    match /messaging/{messageId} {
+      allow read: if true;
+      allow create: if true;
+      // allow update, delete: true;
+    }
+    match /polls/{pollId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+    }
+    match /accounts/{userId} {
+      allow read: if true;
+      allow create: if authenticated();
+      allow update, delete: if itsMe(userId);
+    }
+    // Check if the requesting user is signed in
+    function authenticated() {
+  		return request.auth.uid != null;
+		}
+
+    // Check if the specified userId corresponds the the requesting user
+    function itsMe(userId) {
+  		return request.auth.uid == userId;
+		}
+    // This rule allows anyone on the internet to view, edit, and delete
+    // all data in your Firestore database. It is useful for getting
+    // started, but it is configured to expire after 30 days because it
+    // leaves your app open to attackers. At that time, all client
+    // requests to your Firestore database will be denied.
+    //
+    // Make sure to write security rules for your app before that time, or else
+    // your app will lose access to your Firestore database
+    // match /{document=**} {
+    //   allow read, write: if request.time < timestamp.date(2020, 3, 31);
+    // }
+  }
+}
+// service cloud.firestore {
+//   match /databases/{database}/documents {
+
+//   	// Users.
+//   	// Allows everyone to read user data
+//     // Allows every signed-in user to create a new profile
+//     // Allows only the user herself to update or delete the profile
+//     match /users/{userId} {
+//       allow read: if true;
+//       allow create: if authenticated();
+//       allow update, delete: if itsMe(userId);
+//     }
+
+
+//     // Companies.
+//     // Allows everyone to browse companies
+//     // Allows every signed-in user to create new companies
+//     // Allows only the company owner to update or delete them
+//     match /companies/{company} {
+//     	allow read: if true;
+//     	allow create: if authenticated();
+//       allow update, delete: if itsMe(resource.data.owner.uid);
+// 		}
+
+//     // Company employees.
+//     // Allows everyone to read company's likes
+//     // Allows every signed-in user to likes other's companies
+//     // Only the owner is allowed to delete it (deleting the user)
+//     match /companies/{company}/employees/{depths} {
+//     	allow read: if true;
+//     	allow create, update: if authenticated();
+//       // allow delete: if itsMe(resource.data.owner.uid);
+// 		}
+
+//     // Project's subscriptions.
+//     // Allows everyone to read company's subscriptions
+//     // Allows every signed-in user to subscriptions other's companies
+//     // Only the owner is allowed to delete it (deleting the user)
+//     match /users/{userId}/subscriptions/{shards} {
+//     	allow read: if true;
+//     	allow create, update: if authenticated();
+//       allow delete: if itsMe(resource.data.owner);
+// 		}
+
+//     // Project's likes.
+//     // Allows everyone to read company's likes
+//     // Allows every signed-in user to likes other's companies
+//     // Only the owner is allowed to delete it (deleting the user)
+//     match /companies/{company}/likes/{shards} {
+//     	allow read: if true;
+//     	allow create, update: if authenticated();
+//       allow delete: if itsMe(resource.data.owner.uid);
+// 		}
+
+//     // Project's likedBy.
+//     // Allows everyone to read company's likedBy
+//     // Allows every signed-in user to likes other's companies
+//     // Only the owner is allowed to unlike it (deleting itelf from likers)
+//     match /companies/{company}/likedBy/{likers} {
+//     	allow read: if true;
+//     	allow create, update: if authenticated();
+//       allow delete: if itsMe(resource.id);
+// 		}
+
+
+//     		// Check if the requesting user is signed in
+//     function authenticated() {
+//   		return request.auth.uid != null;
+// 		}
+
+//     // Check if the specified userId corresponds the the requesting user
+//     function itsMe(userId) {
+//   		return request.auth.uid == userId;
+// 		}
+//   }
+// }
