@@ -1,15 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 
-export interface NavItem {
-  title: string;
-  route: string;
-  queryParams?: {
-    [k: string]: string;
-  } | string;
-  icon?: string;
-  externalUrl?: boolean;
-}
-
 @Component({
   selector: 'web-navbar',
   templateUrl: './navbar.element.html',
@@ -18,9 +8,5 @@ export interface NavItem {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarElement {
-  @Input()
-  title: string;
-
-  @Input()
-  items: NavItem[] = [];
+  @Input() header: string;
 }
