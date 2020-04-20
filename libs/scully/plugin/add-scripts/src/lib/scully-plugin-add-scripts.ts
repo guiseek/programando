@@ -27,7 +27,7 @@ const scullyPluginAddScripts = async (html: string, routeData) => {
     const addScript = (file: string, host = '') => {
       const script = window.document.createElement('script');
       script.defer = true;
-      script.src = `${host}/${file}`;
+      script.src = !!host ? `${host}/${file}` : file;
       return window.document.body.appendChild(script);
     }
 

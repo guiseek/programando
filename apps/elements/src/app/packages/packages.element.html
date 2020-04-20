@@ -1,0 +1,9 @@
+<p>packages works!</p>
+
+<pre>{{(packages$ | async).total}}</pre>
+<!-- <ng-container *ngIf="packages$ | async as packages"> -->
+  <details *ngFor="let package of (packages$ | async).results">
+    <summary>{{package.package.name}}</summary>
+    <p>{{package.package.description}}</p>
+  </details>
+<!-- </ng-container> -->

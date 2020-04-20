@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,6 +7,7 @@ import { ImageElement } from './image/image.element';
 import { LogoElement } from './logo/logo.element';
 import { NavLinkElement } from './navbar/nav-link/nav-link.element';
 import { NavbarElement } from './navbar/navbar.element';
+import { PackagesElement } from './packages/packages.element';
 import { PostCardElement } from './post-card/post-card.element';
 import { ToolbarElement } from './toolbar/toolbar.element';
 
@@ -20,11 +22,13 @@ import { ToolbarElement } from './toolbar/toolbar.element';
     NavbarElement,
     NavLinkElement,
     ToolbarElement,
+    PackagesElement,
     // DropdownElement
   ],
   imports: [
     BrowserModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
     // RouterModule,
     // AngularFireModule.initializeApp(environment.firebase),
     // AngularFireAuthModule,
@@ -42,6 +46,7 @@ export class AppModule {
       [NavbarElement, 'web-navbar'],
       [ToolbarElement, 'web-toolbar'],
       [NavLinkElement, 'web-nav-link'],
+      [PackagesElement, 'web-packages'],
       // [DropdownElement, 'web-dropdown'],
       // [UserPollElement, 'web-user-poll'],
       [PostCardElement, 'web-post-card'],
