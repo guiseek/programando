@@ -8,6 +8,7 @@
     "dev": "ng serve -o",
     "build": "ng build",
     "build:watch": "ng build --watch",
+    "elements": "ng serve elements -o",
     "build:elements": "ng build --prod --project elements --output-hashing none && node tools/builders/build-elements.js",
     "start": "firebase emulators:start",
     "only-fun": "firebase deploy --only functions",
