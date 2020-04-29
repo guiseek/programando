@@ -6,39 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shell.component.scss']
 })
 export class ShellComponent implements OnInit {
-  // navigation: NavItem[] = [
-  //   {
-  //     icon: 'angular',
-  //     title: 'Angular',
-  //     route: '/',
-  //     queryParams: { keyword: 'angular' }
-  //   },
-  //   {
-  //     icon: 'nx',
-  //     title: 'NX',
-  //     route: '/',
-  //     queryParams: { keyword: 'nx' }
-  //   },
-  //   {
-  //     icon: 'firebase',
-  //     title: 'Firebase',
-  //     route: '/',
-  //     queryParams: { keyword: 'firebase' }
-  //   },
-  //   {
-  //     icon: 'nestjs',
-  //     title: 'NestJS',
-  //     route: '/',
-  //     queryParams: { keyword: 'nestjs' }
-  //   }
-  // ];
-  // lastDeploy: Date;
-  // constructor(
-  //   // public msg: MessagingService,
-  //   // public auth: AuthService,
-  //   // // private dialog: MatDialog
-  // ) { }
-
   ngOnInit() {
 
     // this.auth.user$.pipe(take(1))

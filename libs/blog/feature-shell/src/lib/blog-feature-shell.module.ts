@@ -41,6 +41,7 @@ import { ShellComponent } from './shell/shell.component';
         children: [
           { path: '', component: OverviewComponent },
           { path: 'posts/:id', component: PostComponent },
+          { path: 'tags/:tag', component: OverviewComponent },
         ]
       }
     ])

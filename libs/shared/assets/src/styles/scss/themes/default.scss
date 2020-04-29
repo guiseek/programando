@@ -50,7 +50,8 @@ $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
     // border-bottom: 1px dotted $white-color;
     transition: color 200ms ease-in-out;
     &:hover {
-      color: $white-color;
+      color: var(--yellow-js);
+      // color: $white-color;
     }
   }
 
