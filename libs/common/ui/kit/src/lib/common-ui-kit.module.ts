@@ -21,6 +21,7 @@ import { SvgViewerService } from './components/svg-viewer/svg-viewer.service';
 import { ToggleThemeButton } from './components/toggle-theme/toggle-theme.button';
 import { TitleDirective } from './directives/title.directive';
 import { HighlightService } from './services/highlight.service';
+import { JsonLdComponent } from './components/json-ld/json-ld.component';
 
 const CommonModules = [
   CommonModule,
@@ -41,7 +42,8 @@ const CommonModules = [
     SvgViewerComponent,
     SnackMessageComponent,
     LogoComponent,
-    IconComponent
+    IconComponent,
+    JsonLdComponent
   ],
   exports: [
     ...CommonModules,
@@ -50,7 +52,8 @@ const CommonModules = [
     SvgViewerComponent,
     SnackMessageComponent,
     LogoComponent,
-    IconComponent
+    IconComponent,
+    JsonLdComponent
   ],
   providers: [
     HighlightService,

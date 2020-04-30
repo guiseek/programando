@@ -4,15 +4,18 @@
       <mat-icon svgIcon="double-arrow-back"></mat-icon>
     </a>
     <article role="article" itemscope itemtype="http://schema.org/BlogPosting">
+      <ui-json-ld [json]="jsonLd"></ui-json-ld>
       <!-- <section class="blog-header">
         <span *ngIf="post.thumbnail" class="image fit">
           <img [src]="post.thumbnail" alt="header image" />
         </span>
       </section> -->
-      <meta itemprop="name headline" [attr.content]="post.title" />
-      <meta itemprop="abstract" [attr.content]="post.description" />
-      <meta itemprop="author" [attr.content]="post.author" />
-      <meta itemprop="datePublished" [attr.content]="post.date" />
+      <meta itemprop="datePublished" [attr.content]="jsonLd.datePublished" />
+      <meta itemprop="dateModified" [attr.content]="jsonLd.dateModified" />
+      <meta itemprop="name headline" [attr.content]="jsonLd.headline" />
+      <meta itemprop="abstract" [attr.content]="jsonLd.description" />
+      <meta itemprop="author" [attr.content]="jsonLd.author.name" />
+      <meta itemprop="image" [attr.content]="jsonLd.image" />
 
       <ng-container *ngIf="showVideo">
         <mat-card class="video-container">
@@ -22,7 +25,8 @@
       <mat-card class="post-author">
         <mat-card-content fxLayout="row" fxLayoutAlign="space-between">
           <div *ngIf="post.keywords">
-            <a *ngFor="let keyword of post.keywords" routerLink="/" [queryParams]="{ keyword: keyword }">
+            <!-- <a *ngFor="let keyword of post.keywords" routerLink="/" [queryParams]="{ keyword: keyword }"> -->
+            <a *ngFor="let keyword of post.keywords">
               <span class="tag tag-sm" [class]="'tag-' + keyword">
                 #{{ keyword }}
               </span>
@@ -32,8 +36,8 @@
             <mat-icon svgIcon="github"></mat-icon>
           </a>
         </mat-card-content>
-        <mat-card-header role="heading" aria-label="Autor e descrição do artigo" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img itemprop="image" mat-card-avatar [src]="post.thumbnail" [attr.alt]="post.description" />
+        <mat-card-header role="heading" aria-label="Autor e descrição do artigo">
+          <img mat-card-avatar [src]="post.thumbnail" [attr.alt]="post.description" />
           <mat-card-title itemprop="abstract">{{post.description}}</mat-card-title>
           <mat-card-subtitle>
             Publicado por

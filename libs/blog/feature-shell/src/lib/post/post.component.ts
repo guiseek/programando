@@ -1,17 +1,17 @@
 /*
  * ----------------------------------------------------------------------------------------
- * "THE BEER-WARE LICENSE" (Revision 42):
+ * 'THE BEER-WARE LICENSE' (Revision 42):
  * <guiseek@gmail.com> escreveu este arquivo. Enquanto você retiver esta nota você poderá
  * fazer o que quiser com esta coisa. Caso nos encontremos algum dia e você ache que esta
  * esta coisa vale, você poderá me comprar uma cerveja em retribuição, Guilherme Siquinelli
  * ----------------------------------------------------------------------------------------
  */
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { AfterViewChecked, Component, Inject, OnInit, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { isScullyGenerated, ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { HighlightService } from '@webapp/common/ui/kit';
-import { MetaService } from '@webapp/shared/util/browser';
+import { BlogPostingJsonLd, createJsonLdObject, MetaService } from '@webapp/shared/util/browser';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
@@ -29,8 +29,10 @@ export class PostComponent implements OnInit, AfterViewChecked {
   isGenerated: boolean;
   showVideo = false;
   contentLoaded = false;
+  jsonLd: Partial<BlogPostingJsonLd> = {};
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(DOCUMENT) private dom: Document,
     private srs: ScullyRoutesService,
     private route: ActivatedRoute,
     // private cdr: ChangeDetectorRef,
@@ -57,6 +59,7 @@ export class PostComponent implements OnInit, AfterViewChecked {
         }
       }),
       tap(post => {
+        this.jsonLd = createJsonLdObject(post);
         this.metaService.createMetaDataForPost(post);
         if (post && post.video) {
           this.addYoutubeApi();
