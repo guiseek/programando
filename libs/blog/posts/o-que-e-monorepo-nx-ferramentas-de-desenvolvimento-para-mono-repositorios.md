@@ -31,8 +31,7 @@ Eu não tenho milhares de projetos, mas isso não impede de obter benefícios co
 
 Em poucas palavras, o propósito é gerenciar a complexidade aplicando melhores práticas para todo o projeto, com isso temos consistência e previsibilidade e maximiza a capacidade de compartilhamento de código entre projetos.
 
-> **Alerta**
-> Mas não adianta somente colocar vários projetos no mesmo diretório. Vai muito além disso.
+*Não se engane. Não adianta somente colocar vários projetos no mesmo diretório, esperando os mesmos benefícios. Vai muito além disso.*
 
 ## Quais os benefícios?
 
