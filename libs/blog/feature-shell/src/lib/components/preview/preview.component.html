@@ -4,11 +4,11 @@
 
     <article *ngFor="let post of blogPosts; let i = index" class="row-fill col-fill sm-12 xs-12 md-6 lg-6">
 
-      <web-like-button
+      <!-- <web-like-button
         likes="0"
         [item]="post.route"
         [action]="action">
-      </web-like-button>
+      </web-like-button> -->
 
       <meta itemprop="name headline" [attr.content]="post.title" />
 

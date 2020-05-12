@@ -43,7 +43,7 @@
     "ci:blog": "npm run blog --configuration=staging && npm run scully",
     "prod": "npm run blog && npm run scully",
     "deploy": "firebase deploy --only hosting:blog",
-    "open": "http-server -c-1 dist/static/apps/blog/ -o",
+    "open": "http-server -c-1 dist/static/apps/blog/ -p 8686 -o",
     "elms": "http-server -c-1 dist/apps/elements/ -p 7070 -o",
     "renew": "npm run build && npm run scully && npm run open",
     "feat": "git flow feature start",
