@@ -9,13 +9,22 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { environment } from '@webapp/env';
+import '@webapp/web/components';
 import { AppModule } from './app/app.module';
 
-if (environment.production) {
-  enableProdMode();
-} else {
-  // import('../../../dist/static/apps/elements/web.js')
+const setupEnv = async function({ production }) {
+  if (production) {
+    enableProdMode();
+  } else {
+    await import('../../../dist/static/apps/elements/web.js');
+  }
 }
+setupEnv(environment);
+// if (environment.production) {
+//   enableProdMode();
+// } else {
+//   import('../../../dist/static/apps/elements/web.js')
+// }
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule)

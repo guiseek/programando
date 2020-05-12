@@ -87,6 +87,9 @@
     },
     "scully-plugin-add-scripts": {
       "tags": ["scope:scully", "type:plugin"]
+    },
+    "web-components": {
+      "tags": []
     }
   }
 }

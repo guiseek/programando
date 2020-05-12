@@ -1,7 +1,7 @@
-import { appinstalled } from './app/let-me-know';
+import { like } from './app/http';
 
-export { appinstalled };
-
+// export { appinstalled };
+export { like };
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //

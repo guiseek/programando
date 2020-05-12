@@ -52,7 +52,8 @@
       ],
       "@webapp/scully/plugin/add-scripts": [
         "libs/scully/plugin/add-scripts/src/index.ts"
-      ]
+      ],
+      "@webapp/web/components": ["libs/web/components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

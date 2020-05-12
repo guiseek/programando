@@ -22,7 +22,7 @@ export class PreviewComponent implements OnInit, OnChanges {
   @Input() keyword: string;
   @Input() search: string;
   blogPostData$: Observable<ScullyRoute[]>;
-
+  action = `http://localhost:5001/head-tech/us-central1/like`;
   constructor(
     private scully: ScullyRoutesService
   ) {}
