@@ -49,7 +49,7 @@
     "@angular/cdk": "^9.1.0",
     "@angular/common": "9.0.0",
     "@angular/compiler": "9.0.0",
-    "@angular/core": "9.0.0",
+    "@angular/core": "10.2.5",
     "@angular/elements": "^9.1.0",
     "@angular/fire": "^5.4.2",
     "@angular/flex-layout": "^9.0.0-beta.29",
